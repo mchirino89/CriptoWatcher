@@ -9,6 +9,7 @@ import UIKit
 
  protocol Coordinator {
      func start()
+    func details(for bookId: String, booksRepo: [CardSourceable])
  }
 
  final class MainCoordinator {
@@ -25,5 +26,11 @@ import UIKit
         mainNavigation = MainListBuilder.build(for: self)
         window.rootViewController = mainNavigation
         window.makeKeyAndVisible()
+    }
+
+    func details(for bookId: String, booksRepo: [CardSourceable]) {
+        let detailsViewController = DetailsViewController(currentBookId: bookId, booksRepo: booksRepo)
+
+        mainNavigation?.pushViewController(detailsViewController, animated: true)
     }
  }

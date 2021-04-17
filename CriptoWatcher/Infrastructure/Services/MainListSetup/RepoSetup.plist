@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>host</key>
-	<string>api.CriptoWatcher.com/v3</string>
+	<string>api.bitso.com/v3</string>
 	<key>availableBooksPath</key>
 	<string>available_books</string>
 </dict>

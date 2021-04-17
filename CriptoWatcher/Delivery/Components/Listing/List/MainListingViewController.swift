@@ -80,5 +80,6 @@ extension MainListingViewController: UICollectionViewDelegateFlowLayout {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.checkDetailsForItem(at: indexPath.row)
     }
 }

@@ -35,4 +35,14 @@ struct MainListViewModel {
             }
         }
     }
+
+    func checkDetailsForItem(at index: Int) {
+        guard dataSource?.data.value.isEmpty == false, let availableRepo = dataSource?.data.value else {
+            return
+        }
+
+        let idForBook = dataSource?.data.value[index].id ?? "N/A"
+
+        navigationListener.details(for: idForBook, booksRepo: availableRepo)
+    }
 }
