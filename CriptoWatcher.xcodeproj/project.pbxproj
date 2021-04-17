@@ -57,6 +57,7 @@
 		71C7E297262B6CC500B13871 /* GraphicsTimeFrameDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E296262B6CC500B13871 /* GraphicsTimeFrameDTO.swift */; };
 		71C7E29B262B6D2100B13871 /* ResponsePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E29A262B6D2100B13871 /* ResponsePayload.swift */; };
 		71C7E2A2262B6E5B00B13871 /* GraphicsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E2A1262B6E5B00B13871 /* GraphicsRepository.swift */; };
+		71C7E2B0262B756100B13871 /* GraphicsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E2AF262B756100B13871 /* GraphicsDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		71C7E296262B6CC500B13871 /* GraphicsTimeFrameDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsTimeFrameDTO.swift; sourceTree = "<group>"; };
 		71C7E29A262B6D2100B13871 /* ResponsePayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePayload.swift; sourceTree = "<group>"; };
 		71C7E2A1262B6E5B00B13871 /* GraphicsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsRepository.swift; sourceTree = "<group>"; };
+		71C7E2AF262B756100B13871 /* GraphicsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -476,6 +478,7 @@
 			children = (
 				7180C2D0262B60890078AEFE /* GraphicsViewController.swift */,
 				7180C2D1262B60890078AEFE /* GraphicsViewController.xib */,
+				71C7E2AF262B756100B13871 /* GraphicsDataSource.swift */,
 			);
 			path = Graphic;
 			sourceTree = "<group>";
@@ -642,6 +645,7 @@
 				71412DAB262B463E00472B34 /* BookDetailsPayload.swift in Sources */,
 				71412D2F262B2A4100472B34 /* MainListingViewController.swift in Sources */,
 				71C7E28F262B6B9200B13871 /* GraphicsSetup.swift in Sources */,
+				71C7E2B0262B756100B13871 /* GraphicsDataSource.swift in Sources */,
 				71C7E29B262B6D2100B13871 /* ResponsePayload.swift in Sources */,
 				7180C2D2262B60890078AEFE /* GraphicsViewController.swift in Sources */,
 				71412D2B262B2A4100472B34 /* BookListingPayload.swift in Sources */,
