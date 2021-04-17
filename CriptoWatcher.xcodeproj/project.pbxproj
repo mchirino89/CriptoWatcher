@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		71412CA7262B1F6D00472B34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412CA6262B1F6D00472B34 /* AppDelegate.swift */; };
-		71412CAB262B1F6D00472B34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412CAA262B1F6D00472B34 /* ViewController.swift */; };
+		71412CAB262B1F6D00472B34 /* MainListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412CAA262B1F6D00472B34 /* MainListingViewController.swift */; };
 		71412CB0262B1F6D00472B34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71412CAF262B1F6D00472B34 /* Assets.xcassets */; };
 		71412CB3262B1F6D00472B34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71412CB1262B1F6D00472B34 /* LaunchScreen.storyboard */; };
 		71412CBE262B1F6E00472B34 /* CriptoWatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412CBD262B1F6E00472B34 /* CriptoWatcherTests.swift */; };
+		71412CF1262B246500472B34 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412CF0262B246500472B34 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,13 +28,14 @@
 /* Begin PBXFileReference section */
 		71412CA3262B1F6D00472B34 /* CriptoWatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CriptoWatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71412CA6262B1F6D00472B34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		71412CAA262B1F6D00472B34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		71412CAA262B1F6D00472B34 /* MainListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListingViewController.swift; sourceTree = "<group>"; };
 		71412CAF262B1F6D00472B34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71412CB2262B1F6D00472B34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71412CB4262B1F6D00472B34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71412CB9262B1F6E00472B34 /* CriptoWatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CriptoWatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71412CBD262B1F6E00472B34 /* CriptoWatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoWatcherTests.swift; sourceTree = "<group>"; };
 		71412CBF262B1F6E00472B34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71412CF0262B246500472B34 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +77,9 @@
 		71412CA5262B1F6D00472B34 /* CriptoWatcher */ = {
 			isa = PBXGroup;
 			children = (
-				71412CA6262B1F6D00472B34 /* AppDelegate.swift */,
-				71412CAA262B1F6D00472B34 /* ViewController.swift */,
-				71412CAF262B1F6D00472B34 /* Assets.xcassets */,
-				71412CB1262B1F6D00472B34 /* LaunchScreen.storyboard */,
+				71412CE3262B23FC00472B34 /* Core */,
+				71412CE9262B243100472B34 /* Delivery */,
+				71412CE6262B240700472B34 /* UI */,
 				71412CB4262B1F6D00472B34 /* Info.plist */,
 			);
 			path = CriptoWatcher;
@@ -91,6 +92,64 @@
 				71412CBF262B1F6E00472B34 /* Info.plist */,
 			);
 			path = CriptoWatcherTests;
+			sourceTree = "<group>";
+		};
+		71412CE3262B23FC00472B34 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				71412CA6262B1F6D00472B34 /* AppDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		71412CE6262B240700472B34 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				71412CE7262B241500472B34 /* Cross */,
+				71412CE8262B241C00472B34 /* Storyboards */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		71412CE7262B241500472B34 /* Cross */ = {
+			isa = PBXGroup;
+			children = (
+				71412CAF262B1F6D00472B34 /* Assets.xcassets */,
+			);
+			path = Cross;
+			sourceTree = "<group>";
+		};
+		71412CE8262B241C00472B34 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				71412CB1262B1F6D00472B34 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		71412CE9262B243100472B34 /* Delivery */ = {
+			isa = PBXGroup;
+			children = (
+				71412CEF262B245300472B34 /* Navigation */,
+				71412CEC262B243D00472B34 /* Listing */,
+			);
+			path = Delivery;
+			sourceTree = "<group>";
+		};
+		71412CEC262B243D00472B34 /* Listing */ = {
+			isa = PBXGroup;
+			children = (
+				71412CAA262B1F6D00472B34 /* MainListingViewController.swift */,
+			);
+			path = Listing;
+			sourceTree = "<group>";
+		};
+		71412CEF262B245300472B34 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				71412CF0262B246500472B34 /* MainCoordinator.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +251,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71412CAB262B1F6D00472B34 /* ViewController.swift in Sources */,
+				71412CAB262B1F6D00472B34 /* MainListingViewController.swift in Sources */,
+				71412CF1262B246500472B34 /* MainCoordinator.swift in Sources */,
 				71412CA7262B1F6D00472B34 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

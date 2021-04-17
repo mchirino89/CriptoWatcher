@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainListingViewController.swift
 //  CriptoWatcher
 //
 //  Created by Mauricio Chirino on 17/4/21.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainListingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .blue
     }
 
 
