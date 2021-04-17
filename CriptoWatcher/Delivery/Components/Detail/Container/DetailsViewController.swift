@@ -24,6 +24,7 @@ final class DetailsViewController: UIViewController {
 
     private let detailsViewModel: DetailsViewModel
     private let dataSource: DetailsDataSource
+    private let infiniteBookScrollViewController: InfiniteListViewController
 
     init(currentBookId: String,
          booksRepo: [CardSourceable],
@@ -32,6 +33,7 @@ final class DetailsViewController: UIViewController {
         detailsViewModel = DetailsViewModel(currentBookId: currentBookId,
                                             dataSource: dataSource,
                                             detailsRepository: detailsRepository)
+        infiniteBookScrollViewController = InfiniteListViewController(booksRepo: booksRepo)
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -41,12 +43,25 @@ final class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupInfinitScroller()
         setupListener()
         detailsViewModel.fetchDetailsForCurrentBook()
+    }
+
+    deinit {
+        print("deallocated details")
     }
 }
 
 private extension DetailsViewController {
+    func setupInfinitScroller() {
+        addChild(infiniteBookScrollViewController)
+        infiniteContainerView.addSubview(infiniteBookScrollViewController.view)
+        infiniteBookScrollViewController.view.frame = infiniteContainerView.bounds
+        infiniteBookScrollViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        infiniteBookScrollViewController.didMove(toParent: self)
+    }
+
     func fillInfo() {
         bidValueLabel.text = dataSource.data.value.first?.bid
         askValueLabel.text  = dataSource.data.value.first?.ask

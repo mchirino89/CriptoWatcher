@@ -44,6 +44,10 @@
 		71412DAA262B463E00472B34 /* DetailsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412DA6262B463E00472B34 /* DetailsDataSource.swift */; };
 		71412DAB262B463E00472B34 /* BookDetailsPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412DA7262B463E00472B34 /* BookDetailsPayload.swift */; };
 		71412DAC262B463E00472B34 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412DA8262B463E00472B34 /* DetailsViewController.swift */; };
+		71412DB6262B48BB00472B34 /* InfiniteListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71412DB1262B48BB00472B34 /* InfiniteListViewController.xib */; };
+		71412DB7262B48BB00472B34 /* InfiniteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412DB2262B48BB00472B34 /* InfiniteListViewController.swift */; };
+		71412DB8262B48BB00472B34 /* BookItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71412DB4262B48BB00472B34 /* BookItemCell.xib */; };
+		71412DB9262B48BB00472B34 /* BookItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412DB5262B48BB00472B34 /* BookItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +100,10 @@
 		71412DA6262B463E00472B34 /* DetailsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsDataSource.swift; sourceTree = "<group>"; };
 		71412DA7262B463E00472B34 /* BookDetailsPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailsPayload.swift; sourceTree = "<group>"; };
 		71412DA8262B463E00472B34 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		71412DB1262B48BB00472B34 /* InfiniteListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfiniteListViewController.xib; sourceTree = "<group>"; };
+		71412DB2262B48BB00472B34 /* InfiniteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteListViewController.swift; sourceTree = "<group>"; };
+		71412DB4262B48BB00472B34 /* BookItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookItemCell.xib; sourceTree = "<group>"; };
+		71412DB5262B48BB00472B34 /* BookItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -395,6 +403,7 @@
 		71412DA3262B463000472B34 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				71412DAF262B48BA00472B34 /* InfinitScroll */,
 				71412DA4262B463E00472B34 /* Container */,
 			);
 			path = Detail;
@@ -409,6 +418,33 @@
 				71412DA8262B463E00472B34 /* DetailsViewController.swift */,
 			);
 			path = Container;
+			sourceTree = "<group>";
+		};
+		71412DAF262B48BA00472B34 /* InfinitScroll */ = {
+			isa = PBXGroup;
+			children = (
+				71412DB0262B48BA00472B34 /* Container */,
+				71412DB3262B48BB00472B34 /* Item */,
+			);
+			path = InfinitScroll;
+			sourceTree = "<group>";
+		};
+		71412DB0262B48BA00472B34 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				71412DB1262B48BB00472B34 /* InfiniteListViewController.xib */,
+				71412DB2262B48BB00472B34 /* InfiniteListViewController.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		71412DB3262B48BB00472B34 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				71412DB4262B48BB00472B34 /* BookItemCell.xib */,
+				71412DB5262B48BB00472B34 /* BookItemCell.swift */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -499,11 +535,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71412DB6262B48BB00472B34 /* InfiniteListViewController.xib in Resources */,
 				71412DA9262B463E00472B34 /* DetailsViewController.xib in Resources */,
 				71412D98262B456A00472B34 /* DetailsSetup.plist in Resources */,
 				71412D30262B2A4100472B34 /* MainListingViewController.xib in Resources */,
 				71412CB3262B1F6D00472B34 /* LaunchScreen.storyboard in Resources */,
 				71412D2E262B2A4100472B34 /* ListItemViewCell.xib in Resources */,
+				71412DB8262B48BB00472B34 /* BookItemCell.xib in Resources */,
 				71412D9A262B456A00472B34 /* RepoSetup.plist in Resources */,
 				71412CB0262B1F6D00472B34 /* Assets.xcassets in Resources */,
 			);
@@ -539,8 +577,10 @@
 				71412D97262B456A00472B34 /* DetailsSetup.swift in Sources */,
 				71412D03262B285800472B34 /* Constants.swift in Sources */,
 				71412D16262B292900472B34 /* Extension+UICollectionView.swift in Sources */,
+				71412DB9262B48BB00472B34 /* BookItemCell.swift in Sources */,
 				71412D99262B456A00472B34 /* RepoSetup.swift in Sources */,
 				71412D96262B456A00472B34 /* BookOverviewDTO.swift in Sources */,
+				71412DB7262B48BB00472B34 /* InfiniteListViewController.swift in Sources */,
 				71412D38262B2ADF00472B34 /* MainListViewModel.swift in Sources */,
 				71412DAB262B463E00472B34 /* BookDetailsPayload.swift in Sources */,
 				71412D2F262B2A4100472B34 /* MainListingViewController.swift in Sources */,
