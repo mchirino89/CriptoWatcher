@@ -5,7 +5,7 @@
 //  Created by Mauricio Chirino on 17/4/21.
 //
 
-import MauriUtils
+import Foundation
 
 struct DetailsSetup: Decodable {
     let host: String

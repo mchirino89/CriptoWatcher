@@ -7,11 +7,6 @@
 
 import Foundation
 
-struct BookDetailsResponse: Decodable {
-    let success: Bool
-    let payload: BookDetailsDTO
-}
-
 struct BookDetailsDTO: Decodable {
     let bookSymbol: String
     let tradeVolume: String

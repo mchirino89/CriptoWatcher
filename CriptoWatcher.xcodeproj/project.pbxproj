@@ -51,6 +51,12 @@
 		7180C2D2262B60890078AEFE /* GraphicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180C2D0262B60890078AEFE /* GraphicsViewController.swift */; };
 		7180C2D3262B60890078AEFE /* GraphicsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7180C2D1262B60890078AEFE /* GraphicsViewController.xib */; };
 		7180C2D9262B61250078AEFE /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180C2D8262B61250078AEFE /* Extension+UIViewController.swift */; };
+		7180C2DF262B6AEC0078AEFE /* GraphicsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180C2DE262B6AEC0078AEFE /* GraphicsViewModel.swift */; };
+		71C7E28F262B6B9200B13871 /* GraphicsSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E28E262B6B9200B13871 /* GraphicsSetup.swift */; };
+		71C7E293262B6BE400B13871 /* GraphicsSetup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C7E292262B6BE300B13871 /* GraphicsSetup.plist */; };
+		71C7E297262B6CC500B13871 /* GraphicsTimeFrameDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E296262B6CC500B13871 /* GraphicsTimeFrameDTO.swift */; };
+		71C7E29B262B6D2100B13871 /* ResponsePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E29A262B6D2100B13871 /* ResponsePayload.swift */; };
+		71C7E2A2262B6E5B00B13871 /* GraphicsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E2A1262B6E5B00B13871 /* GraphicsRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +116,12 @@
 		7180C2D0262B60890078AEFE /* GraphicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsViewController.swift; sourceTree = "<group>"; };
 		7180C2D1262B60890078AEFE /* GraphicsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphicsViewController.xib; sourceTree = "<group>"; };
 		7180C2D8262B61250078AEFE /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		7180C2DE262B6AEC0078AEFE /* GraphicsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsViewModel.swift; sourceTree = "<group>"; };
+		71C7E28E262B6B9200B13871 /* GraphicsSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsSetup.swift; sourceTree = "<group>"; };
+		71C7E292262B6BE300B13871 /* GraphicsSetup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GraphicsSetup.plist; sourceTree = "<group>"; };
+		71C7E296262B6CC500B13871 /* GraphicsTimeFrameDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsTimeFrameDTO.swift; sourceTree = "<group>"; };
+		71C7E29A262B6D2100B13871 /* ResponsePayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePayload.swift; sourceTree = "<group>"; };
+		71C7E2A1262B6E5B00B13871 /* GraphicsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,8 +307,9 @@
 		71412D36262B2A7100472B34 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				71412D37262B2ADF00472B34 /* MainListViewModel.swift */,
 				71412D9F262B45F700472B34 /* DetailsViewModel.swift */,
+				7180C2DE262B6AEC0078AEFE /* GraphicsViewModel.swift */,
+				71412D37262B2ADF00472B34 /* MainListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -355,8 +368,8 @@
 		71412D85262B456A00472B34 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				71C7E29E262B6E3900B13871 /* Payload */,
 				71412D86262B456A00472B34 /* Repositories */,
-				71412D89262B456A00472B34 /* DTOs */,
 				71412D8C262B456A00472B34 /* Services */,
 			);
 			path = Infrastructure;
@@ -365,8 +378,9 @@
 		71412D86262B456A00472B34 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				71412D87262B456A00472B34 /* DetailsRepository.swift */,
 				71412D88262B456A00472B34 /* BookRepository.swift */,
+				71412D87262B456A00472B34 /* DetailsRepository.swift */,
+				71C7E2A1262B6E5B00B13871 /* GraphicsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -376,6 +390,7 @@
 			children = (
 				71412D8A262B456A00472B34 /* BookDetailsDTO.swift */,
 				71412D8B262B456A00472B34 /* BookOverviewDTO.swift */,
+				71C7E296262B6CC500B13871 /* GraphicsTimeFrameDTO.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -383,6 +398,7 @@
 		71412D8C262B456A00472B34 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				71C7E28D262B6B6700B13871 /* GraphicsSetup */,
 				71412D8D262B456A00472B34 /* DetailsSetup */,
 				71412D90262B456A00472B34 /* MainListSetup */,
 			);
@@ -462,6 +478,24 @@
 				7180C2D1262B60890078AEFE /* GraphicsViewController.xib */,
 			);
 			path = Graphic;
+			sourceTree = "<group>";
+		};
+		71C7E28D262B6B6700B13871 /* GraphicsSetup */ = {
+			isa = PBXGroup;
+			children = (
+				71C7E292262B6BE300B13871 /* GraphicsSetup.plist */,
+				71C7E28E262B6B9200B13871 /* GraphicsSetup.swift */,
+			);
+			path = GraphicsSetup;
+			sourceTree = "<group>";
+		};
+		71C7E29E262B6E3900B13871 /* Payload */ = {
+			isa = PBXGroup;
+			children = (
+				71C7E29A262B6D2100B13871 /* ResponsePayload.swift */,
+				71412D89262B456A00472B34 /* DTOs */,
+			);
+			path = Payload;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -556,6 +590,7 @@
 				71412DA9262B463E00472B34 /* DetailsViewController.xib in Resources */,
 				71412D98262B456A00472B34 /* DetailsSetup.plist in Resources */,
 				71412D30262B2A4100472B34 /* MainListingViewController.xib in Resources */,
+				71C7E293262B6BE400B13871 /* GraphicsSetup.plist in Resources */,
 				71412CB3262B1F6D00472B34 /* LaunchScreen.storyboard in Resources */,
 				7180C2D3262B60890078AEFE /* GraphicsViewController.xib in Resources */,
 				71412D2E262B2A4100472B34 /* ListItemViewCell.xib in Resources */,
@@ -585,14 +620,17 @@
 				71412DAC262B463E00472B34 /* DetailsViewController.swift in Sources */,
 				71412D31262B2A4100472B34 /* MainListBuilder.swift in Sources */,
 				71412D94262B456A00472B34 /* BookRepository.swift in Sources */,
+				71C7E2A2262B6E5B00B13871 /* GraphicsRepository.swift in Sources */,
 				71412DAA262B463E00472B34 /* DetailsDataSource.swift in Sources */,
 				71412D93262B456A00472B34 /* DetailsRepository.swift in Sources */,
 				71412CF1262B246500472B34 /* MainCoordinator.swift in Sources */,
+				7180C2DF262B6AEC0078AEFE /* GraphicsViewModel.swift in Sources */,
 				71412CA7262B1F6D00472B34 /* AppDelegate.swift in Sources */,
 				71412D2D262B2A4100472B34 /* ItemDataSource.swift in Sources */,
 				71412DA0262B45F700472B34 /* DetailsViewModel.swift in Sources */,
 				71412D95262B456A00472B34 /* BookDetailsDTO.swift in Sources */,
 				71412D97262B456A00472B34 /* DetailsSetup.swift in Sources */,
+				71C7E297262B6CC500B13871 /* GraphicsTimeFrameDTO.swift in Sources */,
 				71412D03262B285800472B34 /* Constants.swift in Sources */,
 				71412D16262B292900472B34 /* Extension+UICollectionView.swift in Sources */,
 				7180C2D9262B61250078AEFE /* Extension+UIViewController.swift in Sources */,
@@ -603,6 +641,8 @@
 				71412D38262B2ADF00472B34 /* MainListViewModel.swift in Sources */,
 				71412DAB262B463E00472B34 /* BookDetailsPayload.swift in Sources */,
 				71412D2F262B2A4100472B34 /* MainListingViewController.swift in Sources */,
+				71C7E28F262B6B9200B13871 /* GraphicsSetup.swift in Sources */,
+				71C7E29B262B6D2100B13871 /* ResponsePayload.swift in Sources */,
 				7180C2D2262B60890078AEFE /* GraphicsViewController.swift in Sources */,
 				71412D2B262B2A4100472B34 /* BookListingPayload.swift in Sources */,
 				71412D41262B2B5100472B34 /* CoinHandler.swift in Sources */,

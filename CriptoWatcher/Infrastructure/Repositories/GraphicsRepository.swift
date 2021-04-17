@@ -1,5 +1,5 @@
 //
-//  DetailsRepository.swift
+//  GraphicsRepository.swift
 //  CriptoWatcher
 //
 //  Created by Mauricio Chirino on 17/4/21.
@@ -8,33 +8,32 @@
 import MauriNet
 import MauriUtils
 
-typealias DetailsResult = (Result<BookDetailsDTO, NetworkError>) -> Void
+typealias GraphicsResult = (Result<[GraphicsTimeFrameDTO], NetworkError>) -> Void
 
-protocol OrderDetailable {
-    func bookInfo(for bookId: String, onCompletion: @escaping DetailsResult)
+protocol GraphicableSet {
+    func fluctuationFor(book: String, onSegment: Int, onCompletion: @escaping GraphicsResult)
 }
 
-struct DetailsRepository: OrderDetailable {
+struct GraphicsRepository: GraphicableSet {
     private let networkService: RequestableManager
-    private let endpointSetup: DetailsSetup
+    private let endpointSetup: GraphicsSetup
 
     init(networkService: RequestableManager = RequestManager()) {
         self.networkService = networkService
         // This is a force unwrap since failing here would invalidate the entire app setup. It's best to crash early
-        endpointSetup = try! FileReader().decodePlist(from: "DetailsSetup")
+        endpointSetup = try! FileReader().decodePlist(from: "GraphicsSetup")
     }
 
-    func bookInfo(for bookId: String, onCompletion: @escaping DetailsResult) {
-        let queryForBook: [String: String] = [endpointSetup.bookParameter: bookId]
+    func fluctuationFor(book: String, onSegment: Int, onCompletion: @escaping GraphicsResult) {
+        let assembledPath = book + "/" + endpointSetup.timeFrame[onSegment]
         let endpoint = APIEndpoint(host: endpointSetup.host)
-        let assembledRequest = EndpointBuilder(endpointSetup: endpoint)
-            .assembleRequest(path: endpointSetup.bookDetailsPath, queryParameters: queryForBook)
+        let assembledRequest = EndpointBuilder(endpointSetup: endpoint).assembleRequest(path: assembledPath)
 
         networkService.request(assembledRequest) { result in
             switch result {
             case .success(let retrievedData):
                 do {
-                    let response: ResponsePayload<BookDetailsDTO> = try JSONDecodable.map(input: retrievedData)
+                    let response: ResponsePayload<[GraphicsTimeFrameDTO]> = try JSONDecodable.map(input: retrievedData)
                     guard response.success else {
                         onCompletion(.failure(.serviceUnavailable))
                         return

@@ -5,7 +5,6 @@
 //  Created by Mauricio Chirino on 17/4/21.
 //
 
-import Foundation
 import MauriNet
 import MauriUtils
 
@@ -35,13 +34,13 @@ struct BookRepository: OrdersAvailable {
             switch result {
             case .success(let retrievedData):
                 do {
-                    let successfulResponse: BookResponse = try JSONDecodable.map(input: retrievedData)
-                    guard successfulResponse.success else {
+                    let response: ResponsePayload<[BookOverviewDTO]> = try JSONDecodable.map(input: retrievedData)
+                    guard response.success else {
                         onCompletion(.failure(.serviceUnavailable))
                         return
                     }
                     
-                    onCompletion(.success(successfulResponse.payload))
+                    onCompletion(.success(response.payload))
                 } catch {
                     onCompletion(.failure(.conflictOnResource))
                 }

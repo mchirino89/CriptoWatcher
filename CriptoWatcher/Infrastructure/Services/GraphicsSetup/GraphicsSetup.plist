@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>host</key>
+	<string>bitso.com/trade/chartJSON</string>
+	<key>timeFrame</key>
+	<array>
+		<string>1month</string>
+		<string>3month</string>
+		<string>1year</string>
+	</array>
+</dict>
+</plist>
