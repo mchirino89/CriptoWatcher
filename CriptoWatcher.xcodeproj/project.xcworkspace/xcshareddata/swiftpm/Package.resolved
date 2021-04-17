@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MauriNet",
+        "repositoryURL": "git@github.com:mchirino89/MauriNet.git",
+        "state": {
+          "branch": null,
+          "revision": "dbb3a75350fbf5caaf3f8ebbddf157b552df530a",
+          "version": "0.4.2"
+        }
+      },
+      {
+        "package": "MauriUtils",
+        "repositoryURL": "git@github.com:mchirino89/MauriUtils.git",
+        "state": {
+          "branch": null,
+          "revision": "f2bd8e23d25a78b2aabbcadec2834b6b711241d3",
+          "version": "1.3.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
