@@ -9,15 +9,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="Bitso" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="CriptoWatcher" customModuleProvider="target">
             <connections>
                 <outlet property="activityLoader" destination="CVl-gR-Kha" id="Kdg-eY-8hL"/>
                 <outlet property="askValueLabel" destination="DeE-4z-9LI" id="CSn-Z7-AO7"/>
                 <outlet property="bidValueLabel" destination="B5K-yN-OZl" id="mue-Yv-Er9"/>
                 <outlet property="containerStackView" destination="HcE-fi-YGb" id="P80-3W-Y0y"/>
                 <outlet property="dayValueLabel" destination="Vjw-cP-unF" id="3gC-Xu-RX9"/>
-                <outlet property="graphicPeriodSegments" destination="Hx0-th-ZT7" id="pAS-Jg-1QP"/>
-                <outlet property="graphicView" destination="GpP-nU-bk6" id="1ZN-GM-Hz9"/>
+                <outlet property="graphicsContainerView" destination="ozC-xE-BFe" id="OPa-kg-ggu"/>
                 <outlet property="highValueLabel" destination="qSW-Cm-dsv" id="YPr-36-Bg0"/>
                 <outlet property="infiniteContainerView" destination="BLy-Rf-SxI" id="J2h-4H-c9y"/>
                 <outlet property="lastPriceValueLabel" destination="Ofh-ng-8b0" id="42g-59-zbh"/>
@@ -177,38 +176,14 @@
                                 </stackView>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1ff-o8-Qs8" userLabel="Graphic Stack View">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ozC-xE-BFe" userLabel="Graphics Container View">
                             <rect key="frame" x="0.0" y="499.33333333333337" width="396" height="332.66666666666663"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GpP-nU-bk6">
-                                    <rect key="frame" x="0.0" y="0.0" width="396" height="285.66666666666669"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyGraphic" translatesAutoresizingMaskIntoConstraints="NO" id="YxU-O6-TlH">
-                                            <rect key="frame" x="0.0" y="0.0" width="396" height="285.66666666666669"/>
-                                        </imageView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstItem="YxU-O6-TlH" firstAttribute="width" secondItem="GpP-nU-bk6" secondAttribute="width" id="6gt-cT-yGU"/>
-                                        <constraint firstItem="YxU-O6-TlH" firstAttribute="centerY" secondItem="GpP-nU-bk6" secondAttribute="centerY" id="8Lc-P3-Mh6"/>
-                                        <constraint firstItem="YxU-O6-TlH" firstAttribute="height" secondItem="GpP-nU-bk6" secondAttribute="height" id="VRw-24-pfz"/>
-                                        <constraint firstItem="YxU-O6-TlH" firstAttribute="centerX" secondItem="GpP-nU-bk6" secondAttribute="centerX" id="X5B-lE-v9G"/>
-                                    </constraints>
-                                </view>
-                                <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hx0-th-ZT7">
-                                    <rect key="frame" x="0.0" y="301.66666666666663" width="396" height="32"/>
-                                    <segments>
-                                        <segment title="1 mes"/>
-                                        <segment title="3 meses"/>
-                                        <segment title="1 año"/>
-                                    </segments>
-                                </segmentedControl>
-                            </subviews>
-                        </stackView>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="1ff-o8-Qs8" firstAttribute="height" secondItem="HcE-fi-YGb" secondAttribute="height" multiplier="0.4" id="f1m-Yg-7lZ"/>
                         <constraint firstItem="BLy-Rf-SxI" firstAttribute="height" secondItem="HcE-fi-YGb" secondAttribute="height" multiplier="0.15" id="fXz-ps-66j"/>
+                        <constraint firstItem="ozC-xE-BFe" firstAttribute="height" secondItem="HcE-fi-YGb" secondAttribute="height" multiplier="0.4" id="ypE-sF-emV"/>
                     </constraints>
                 </stackView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="CVl-gR-Kha">
@@ -231,7 +206,6 @@
         </view>
     </objects>
     <resources>
-        <image name="dummyGraphic" width="231" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

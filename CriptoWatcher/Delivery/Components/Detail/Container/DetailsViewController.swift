@@ -12,6 +12,7 @@ final class DetailsViewController: UIViewController {
     @IBOutlet private weak var containerStackView: UIStackView!
     @IBOutlet private weak  var activityLoader: UIActivityIndicatorView!
     @IBOutlet private weak var infiniteContainerView: UIView!
+    @IBOutlet private weak var graphicsContainerView: UIView!
     @IBOutlet private weak var lastPriceValueLabel: UILabel!
     @IBOutlet private weak var spreadValueLabel: UILabel!
     @IBOutlet private weak var bidValueLabel: UILabel!
@@ -19,12 +20,11 @@ final class DetailsViewController: UIViewController {
     @IBOutlet private weak var lowValueLabel: UILabel!
     @IBOutlet private weak var highValueLabel: UILabel!
     @IBOutlet private weak var dayValueLabel: UILabel!
-    @IBOutlet private weak var graphicView: UIView!
-    @IBOutlet private weak var graphicPeriodSegments: UISegmentedControl!
 
     private let detailsViewModel: DetailsViewModel
     private let dataSource: DetailsDataSource
     private let infiniteBookScrollViewController: InfiniteListViewController
+    private let graphicsViewController: GraphicsViewController
 
     init(currentBookId: String,
          booksRepo: [CardSourceable],
@@ -34,6 +34,7 @@ final class DetailsViewController: UIViewController {
                                             dataSource: dataSource,
                                             detailsRepository: detailsRepository)
         infiniteBookScrollViewController = InfiniteListViewController(booksRepo: booksRepo)
+        graphicsViewController = GraphicsViewController(currentBookId: currentBookId)
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -43,7 +44,8 @@ final class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupInfinitScroller()
+        addExternal(viewController: infiniteBookScrollViewController, on: infiniteContainerView)
+        addExternal(viewController: graphicsViewController, on: graphicsContainerView)
         setupListener()
         detailsViewModel.fetchDetailsForCurrentBook()
     }
@@ -54,14 +56,6 @@ final class DetailsViewController: UIViewController {
 }
 
 private extension DetailsViewController {
-    func setupInfinitScroller() {
-        addChild(infiniteBookScrollViewController)
-        infiniteContainerView.addSubview(infiniteBookScrollViewController.view)
-        infiniteBookScrollViewController.view.frame = infiniteContainerView.bounds
-        infiniteBookScrollViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        infiniteBookScrollViewController.didMove(toParent: self)
-    }
-
     func fillInfo() {
         bidValueLabel.text = dataSource.data.value.first?.bid
         askValueLabel.text  = dataSource.data.value.first?.ask
@@ -96,13 +90,7 @@ private extension DetailsViewController {
 
     func initUISetup() {
         title = detailsViewModel.title
-        graphicPeriodSegments.addTarget(self, action: #selector(segmentSelected(_:)), for: .valueChanged)
         containerStackView.alpha = 0
         activityLoader.startAnimating()
-    }
-
-    @objc
-    func segmentSelected(_ sender: UISegmentedControl) {
-        print("tapped on segment: \(sender.selectedSegmentIndex + 1)")
     }
 }
