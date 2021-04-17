@@ -1,6 +1,6 @@
 //
 //  Constants.swift
-//  Bitso
+//  CriptoWatcher
 //
 //  Created by Mauricio Chirino on 17/4/21.
 //

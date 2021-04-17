@@ -21,9 +21,9 @@ import UIKit
  }
 
  extension MainCoordinator: Coordinator {
-     func start() {
-         mainNavigation = UINavigationController(rootViewController: MainListingViewController())
-         window.rootViewController = mainNavigation
-         window.makeKeyAndVisible()
-     }
+    func start() {
+        mainNavigation = MainListBuilder.build(for: self)
+        window.rootViewController = mainNavigation
+        window.makeKeyAndVisible()
+    }
  }

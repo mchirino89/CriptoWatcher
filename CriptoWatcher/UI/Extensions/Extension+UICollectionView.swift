@@ -1,8 +1,8 @@
 //
 //  Extension+UICollectionView.swift
-//  Bitso
+//  CriptoWatcher
 //
-//  Created by Mauricio Chirino on 2/4/21.
+//  Created by Mauricio Chirino on 17/4/21.
 //
 
 import UIKit
