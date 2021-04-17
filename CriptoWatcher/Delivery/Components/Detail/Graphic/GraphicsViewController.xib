@@ -24,20 +24,9 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KRp-ID-CNh">
                     <rect key="frame" x="0.0" y="0.0" width="330" height="370"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRf-Bd-jCw">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRf-Bd-jCw" customClass="GraphView" customModule="CriptoWatcher" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="330" height="323"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyGraphic" translatesAutoresizingMaskIntoConstraints="NO" id="Ukb-Uo-s0c">
-                                    <rect key="frame" x="0.0" y="0.0" width="330" height="323"/>
-                                </imageView>
-                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstItem="Ukb-Uo-s0c" firstAttribute="centerX" secondItem="iRf-Bd-jCw" secondAttribute="centerX" id="E1h-2J-3wO"/>
-                                <constraint firstItem="Ukb-Uo-s0c" firstAttribute="centerY" secondItem="iRf-Bd-jCw" secondAttribute="centerY" id="W0e-oP-1A2"/>
-                                <constraint firstItem="Ukb-Uo-s0c" firstAttribute="height" secondItem="iRf-Bd-jCw" secondAttribute="height" id="XBs-8K-MOc"/>
-                                <constraint firstItem="Ukb-Uo-s0c" firstAttribute="width" secondItem="iRf-Bd-jCw" secondAttribute="width" id="uKr-AP-R5W"/>
-                            </constraints>
                         </view>
                         <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4Hf-L0-IdT">
                             <rect key="frame" x="0.0" y="339" width="330" height="32"/>
@@ -68,7 +57,6 @@
         </view>
     </objects>
     <resources>
-        <image name="dummyGraphic" width="231" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -7,7 +7,7 @@
 
 import MauriUtils
 
-final class GraphicsDataSource: DataSource<GraphicsTimeFrameDTO> {
+final class GraphicsDataSource: DataSource<Double> {
     func render(completion: @escaping (() -> Void)) {
         data.update { _ in
             completion()

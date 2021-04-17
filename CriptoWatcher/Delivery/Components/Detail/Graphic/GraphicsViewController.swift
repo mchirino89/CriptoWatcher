@@ -9,7 +9,7 @@ import MauriUtils
 import UIKit
 
 final class GraphicsViewController: UIViewController {
-    @IBOutlet private weak var graphicView: UIView!
+    @IBOutlet private weak var graphicView: GraphView!
     @IBOutlet private weak var graphicPeriodSegments: UISegmentedControl!
     @IBOutlet private weak  var activityLoader: UIActivityIndicatorView!
 
@@ -44,6 +44,8 @@ private extension GraphicsViewController {
     }
 
     func refreshGraph() {
+        graphicView.graphPoints = dataSource.data.value
+        graphicView.setNeedsDisplay()
         graphicPeriodSegments.isEnabled = true
         activityLoader.stopAnimating()
     }
