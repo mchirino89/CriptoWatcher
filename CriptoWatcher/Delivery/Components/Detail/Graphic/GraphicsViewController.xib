@@ -1,54 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GraphicsViewController" customModule="CriptoWatcher" customModuleProvider="target">
             <connections>
+                <outlet property="activityLoader" destination="Rok-Kw-DN9" id="lWq-OU-Sj6"/>
                 <outlet property="graphicPeriodSegments" destination="4Hf-L0-IdT" id="0HW-SX-5yi"/>
                 <outlet property="graphicView" destination="iRf-Bd-jCw" id="R4z-e4-CIg"/>
-                <outlet property="view" destination="2qr-gq-7op" id="h8b-BJ-A1l"/>
+                <outlet property="view" destination="XQr-l5-9tR" id="3wp-RQ-e9B"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" id="2qr-gq-7op" userLabel="Graphic Stack View">
-            <rect key="frame" x="0.0" y="0.0" width="396" height="332.5"/>
+        <view contentMode="scaleToFill" id="XQr-l5-9tR">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="370"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRf-Bd-jCw">
-                    <rect key="frame" x="0.0" y="0.0" width="396" height="285.5"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KRp-ID-CNh">
+                    <rect key="frame" x="0.0" y="0.0" width="330" height="370"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyGraphic" translatesAutoresizingMaskIntoConstraints="NO" id="Ukb-Uo-s0c">
-                            <rect key="frame" x="0.0" y="0.0" width="396" height="285.5"/>
-                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRf-Bd-jCw">
+                            <rect key="frame" x="0.0" y="0.0" width="330" height="323"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyGraphic" translatesAutoresizingMaskIntoConstraints="NO" id="Ukb-Uo-s0c">
+                                    <rect key="frame" x="0.0" y="0.0" width="330" height="323"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Ukb-Uo-s0c" firstAttribute="centerX" secondItem="iRf-Bd-jCw" secondAttribute="centerX" id="E1h-2J-3wO"/>
+                                <constraint firstItem="Ukb-Uo-s0c" firstAttribute="centerY" secondItem="iRf-Bd-jCw" secondAttribute="centerY" id="W0e-oP-1A2"/>
+                                <constraint firstItem="Ukb-Uo-s0c" firstAttribute="height" secondItem="iRf-Bd-jCw" secondAttribute="height" id="XBs-8K-MOc"/>
+                                <constraint firstItem="Ukb-Uo-s0c" firstAttribute="width" secondItem="iRf-Bd-jCw" secondAttribute="width" id="uKr-AP-R5W"/>
+                            </constraints>
+                        </view>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4Hf-L0-IdT">
+                            <rect key="frame" x="0.0" y="339" width="330" height="32"/>
+                            <segments>
+                                <segment title="1 mes"/>
+                                <segment title="3 meses"/>
+                                <segment title="1 año"/>
+                            </segments>
+                        </segmentedControl>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="Ukb-Uo-s0c" firstAttribute="centerX" secondItem="iRf-Bd-jCw" secondAttribute="centerX" id="E1h-2J-3wO"/>
-                        <constraint firstItem="Ukb-Uo-s0c" firstAttribute="centerY" secondItem="iRf-Bd-jCw" secondAttribute="centerY" id="W0e-oP-1A2"/>
-                        <constraint firstItem="Ukb-Uo-s0c" firstAttribute="height" secondItem="iRf-Bd-jCw" secondAttribute="height" id="XBs-8K-MOc"/>
-                        <constraint firstItem="Ukb-Uo-s0c" firstAttribute="width" secondItem="iRf-Bd-jCw" secondAttribute="width" id="uKr-AP-R5W"/>
-                    </constraints>
-                </view>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4Hf-L0-IdT">
-                    <rect key="frame" x="0.0" y="301.5" width="396" height="32"/>
-                    <segments>
-                        <segment title="1 mes"/>
-                        <segment title="3 meses"/>
-                        <segment title="1 año"/>
-                    </segments>
-                </segmentedControl>
+                </stackView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Rok-Kw-DN9">
+                    <rect key="frame" x="146.5" y="166.5" width="37" height="37"/>
+                    <color key="color" systemColor="systemGreenColor"/>
+                </activityIndicatorView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="E3p-JC-O8l"/>
-            <point key="canvasLocation" x="141" y="-321"/>
-        </stackView>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Rok-Kw-DN9" firstAttribute="centerY" secondItem="XQr-l5-9tR" secondAttribute="centerY" id="KYi-I3-BQf"/>
+                <constraint firstItem="KRp-ID-CNh" firstAttribute="centerY" secondItem="XQr-l5-9tR" secondAttribute="centerY" id="XWQ-Hr-cWn"/>
+                <constraint firstItem="Rok-Kw-DN9" firstAttribute="centerX" secondItem="XQr-l5-9tR" secondAttribute="centerX" id="cjf-K2-kBi"/>
+                <constraint firstItem="KRp-ID-CNh" firstAttribute="height" secondItem="XQr-l5-9tR" secondAttribute="height" id="fI9-qf-fwe"/>
+                <constraint firstItem="KRp-ID-CNh" firstAttribute="width" secondItem="XQr-l5-9tR" secondAttribute="width" id="kVI-C2-szE"/>
+                <constraint firstItem="KRp-ID-CNh" firstAttribute="centerX" secondItem="XQr-l5-9tR" secondAttribute="centerX" id="rct-sD-n6S"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-475" y="-791"/>
+        </view>
     </objects>
     <resources>
         <image name="dummyGraphic" width="231" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

@@ -33,13 +33,9 @@ struct GraphicsRepository: GraphicableSet {
             switch result {
             case .success(let retrievedData):
                 do {
-                    let response: ResponsePayload<[GraphicsTimeFrameDTO]> = try JSONDecodable.map(input: retrievedData)
-                    guard response.success else {
-                        onCompletion(.failure(.serviceUnavailable))
-                        return
-                    }
+                    let response: [GraphicsTimeFrameDTO] = try JSONDecodable.map(input: retrievedData)
 
-                    onCompletion(.success(response.payload))
+                    onCompletion(.success(response))
                 } catch {
                     onCompletion(.failure(.conflictOnResource))
                 }

@@ -30,21 +30,25 @@ final class GraphicsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        graphicPeriodSegments.addTarget(self, action: #selector(segmentSelected(_:)), for: .valueChanged)
+        setupListeners()
+        segmentSelected(graphicPeriodSegments)
     }
 }
 
 private extension GraphicsViewController {
     @objc
     func segmentSelected(_ sender: UISegmentedControl) {
-        print("tapped on segment: \(sender.selectedSegmentIndex + 1)")
+        activityLoader.startAnimating()
+        graphicPeriodSegments.isEnabled = false
+        viewModel.showFluctuation(for: sender.selectedSegmentIndex)
     }
 
     func refreshGraph() {
+        graphicPeriodSegments.isEnabled = true
         activityLoader.stopAnimating()
     }
 
-    func setupListener() {
+    func setupListeners() {
         let uiUpdateCompletion: () -> Void = { [weak self] in
             self?.refreshGraph()
         }
@@ -54,5 +58,6 @@ private extension GraphicsViewController {
         }
 
         dataSource.render(completion: renderCompletion)
+        graphicPeriodSegments.addTarget(self, action: #selector(segmentSelected(_:)), for: .valueChanged)
     }
 }
