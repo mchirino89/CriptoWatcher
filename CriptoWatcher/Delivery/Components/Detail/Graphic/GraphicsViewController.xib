@@ -39,17 +39,17 @@
                     </subviews>
                 </stackView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Rok-Kw-DN9">
-                    <rect key="frame" x="146.5" y="166.5" width="37" height="37"/>
-                    <color key="color" systemColor="systemGreenColor"/>
+                    <rect key="frame" x="146.5" y="143" width="37" height="37"/>
+                    <color key="color" systemColor="systemYellowColor"/>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Rok-Kw-DN9" firstAttribute="centerY" secondItem="XQr-l5-9tR" secondAttribute="centerY" id="KYi-I3-BQf"/>
                 <constraint firstItem="KRp-ID-CNh" firstAttribute="centerY" secondItem="XQr-l5-9tR" secondAttribute="centerY" id="XWQ-Hr-cWn"/>
                 <constraint firstItem="Rok-Kw-DN9" firstAttribute="centerX" secondItem="XQr-l5-9tR" secondAttribute="centerX" id="cjf-K2-kBi"/>
                 <constraint firstItem="KRp-ID-CNh" firstAttribute="height" secondItem="XQr-l5-9tR" secondAttribute="height" id="fI9-qf-fwe"/>
                 <constraint firstItem="KRp-ID-CNh" firstAttribute="width" secondItem="XQr-l5-9tR" secondAttribute="width" id="kVI-C2-szE"/>
+                <constraint firstItem="Rok-Kw-DN9" firstAttribute="centerY" secondItem="iRf-Bd-jCw" secondAttribute="centerY" id="qiQ-gJ-97V"/>
                 <constraint firstItem="KRp-ID-CNh" firstAttribute="centerX" secondItem="XQr-l5-9tR" secondAttribute="centerX" id="rct-sD-n6S"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -60,8 +60,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -9,20 +9,18 @@ import UIKit
 
 class GraphView: UIView {
     private enum Constants {
-        static let cornerRadiusSize = CGSize(width: 8.0, height: 8.0)
-        static let margin: CGFloat = 20.0
-        static let topBorder: CGFloat = 60
+        static let cornerRadiusSize = CGSize(width: 8, height: 8)
+        static let margin: CGFloat = 8
+        static let topBorder: CGFloat = 50
         static let bottomBorder: CGFloat = 50
         static let colorAlpha: CGFloat = 0.3
         static let circleDiameter: CGFloat = 5.0
     }
 
-    var startColor: UIColor = .red
-    var endColor: UIColor = .green
+    var startColor: UIColor = .systemTeal
 
     var graphPoints: [Double] = []
 
-    // swiftlint:disable:next function_body_length
     override func draw(_ rect: CGRect) {
         let width = rect.width
         let height = rect.height
@@ -37,7 +35,7 @@ class GraphView: UIView {
         guard let context = UIGraphicsGetCurrentContext() else {
             return
         }
-        let colors = [startColor.cgColor, endColor.cgColor]
+        let colors = [startColor.cgColor]
 
         let colorSpace = CGColorSpaceCreateDeviceRGB()
 
@@ -51,8 +49,8 @@ class GraphView: UIView {
             return
         }
 
-        var startPoint = CGPoint.zero
-        var endPoint = CGPoint(x: 0, y: bounds.height)
+        let startPoint = CGPoint.zero
+        let endPoint = CGPoint(x: 0, y: bounds.height)
         context.drawLinearGradient(
             gradient,
             start: startPoint,
@@ -100,16 +98,6 @@ class GraphView: UIView {
 
         clippingPath.addClip()
 
-        let highestYPoint = columnYPoint(maxValue)
-        startPoint = CGPoint(x: margin, y: highestYPoint)
-        endPoint = CGPoint(x: margin, y: bounds.height)
-
-        context.drawLinearGradient(
-            gradient,
-            start: startPoint,
-            end: endPoint,
-            options: CGGradientDrawingOptions(rawValue: 0)
-        )
         context.restoreGState()
 
         graphPath.lineWidth = 2.0
