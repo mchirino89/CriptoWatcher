@@ -26,15 +26,19 @@
 		71412D31262B2A4100472B34 /* MainListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412D29262B2A4100472B34 /* MainListBuilder.swift */; };
 		71412D38262B2ADF00472B34 /* MainListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412D37262B2ADF00472B34 /* MainListViewModel.swift */; };
 		71412D41262B2B5100472B34 /* CoinHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412D40262B2B5100472B34 /* CoinHandler.swift */; };
-		71412D49262B2B8B00472B34 /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412D47262B2B8B00472B34 /* BookRepository.swift */; };
-		71412D57262B2B9900472B34 /* BookOverviewDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412D4E262B2B9900472B34 /* BookOverviewDTO.swift */; };
-		71412D5A262B2B9900472B34 /* RepoSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412D54262B2B9900472B34 /* RepoSetup.swift */; };
-		71412D5B262B2B9900472B34 /* RepoSetup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71412D55262B2B9900472B34 /* RepoSetup.plist */; };
 		71412D76262B2D3300472B34 /* BookRepositoryTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412D69262B2D3300472B34 /* BookRepositoryTestCases.swift */; };
 		71412D77262B2D3300472B34 /* FailingResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 71412D6E262B2D3300472B34 /* FailingResponse.json */; };
 		71412D78262B2D3300472B34 /* SuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 71412D6F262B2D3300472B34 /* SuccessfulResponse.json */; };
 		71412D79262B2D3300472B34 /* FailureRequestManagerMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412D71262B2D3300472B34 /* FailureRequestManagerMocks.swift */; };
 		71412D7A262B2D3300472B34 /* FakeBookRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412D74262B2D3300472B34 /* FakeBookRepo.swift */; };
+		71412D93262B456A00472B34 /* DetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412D87262B456A00472B34 /* DetailsRepository.swift */; };
+		71412D94262B456A00472B34 /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412D88262B456A00472B34 /* BookRepository.swift */; };
+		71412D95262B456A00472B34 /* BookDetailsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412D8A262B456A00472B34 /* BookDetailsDTO.swift */; };
+		71412D96262B456A00472B34 /* BookOverviewDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412D8B262B456A00472B34 /* BookOverviewDTO.swift */; };
+		71412D97262B456A00472B34 /* DetailsSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412D8E262B456A00472B34 /* DetailsSetup.swift */; };
+		71412D98262B456A00472B34 /* DetailsSetup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71412D8F262B456A00472B34 /* DetailsSetup.plist */; };
+		71412D99262B456A00472B34 /* RepoSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412D91262B456A00472B34 /* RepoSetup.swift */; };
+		71412D9A262B456A00472B34 /* RepoSetup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71412D92262B456A00472B34 /* RepoSetup.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,15 +73,19 @@
 		71412D29262B2A4100472B34 /* MainListBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainListBuilder.swift; sourceTree = "<group>"; };
 		71412D37262B2ADF00472B34 /* MainListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainListViewModel.swift; sourceTree = "<group>"; };
 		71412D40262B2B5100472B34 /* CoinHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinHandler.swift; sourceTree = "<group>"; };
-		71412D47262B2B8B00472B34 /* BookRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
-		71412D4E262B2B9900472B34 /* BookOverviewDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookOverviewDTO.swift; sourceTree = "<group>"; };
-		71412D54262B2B9900472B34 /* RepoSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoSetup.swift; sourceTree = "<group>"; };
-		71412D55262B2B9900472B34 /* RepoSetup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RepoSetup.plist; sourceTree = "<group>"; };
 		71412D69262B2D3300472B34 /* BookRepositoryTestCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookRepositoryTestCases.swift; sourceTree = "<group>"; };
 		71412D6E262B2D3300472B34 /* FailingResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FailingResponse.json; sourceTree = "<group>"; };
 		71412D6F262B2D3300472B34 /* SuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SuccessfulResponse.json; sourceTree = "<group>"; };
 		71412D71262B2D3300472B34 /* FailureRequestManagerMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FailureRequestManagerMocks.swift; sourceTree = "<group>"; };
 		71412D74262B2D3300472B34 /* FakeBookRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeBookRepo.swift; sourceTree = "<group>"; };
+		71412D87262B456A00472B34 /* DetailsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsRepository.swift; sourceTree = "<group>"; };
+		71412D88262B456A00472B34 /* BookRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
+		71412D8A262B456A00472B34 /* BookDetailsDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailsDTO.swift; sourceTree = "<group>"; };
+		71412D8B262B456A00472B34 /* BookOverviewDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookOverviewDTO.swift; sourceTree = "<group>"; };
+		71412D8E262B456A00472B34 /* DetailsSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsSetup.swift; sourceTree = "<group>"; };
+		71412D8F262B456A00472B34 /* DetailsSetup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DetailsSetup.plist; sourceTree = "<group>"; };
+		71412D91262B456A00472B34 /* RepoSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoSetup.swift; sourceTree = "<group>"; };
+		71412D92262B456A00472B34 /* RepoSetup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RepoSetup.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +132,7 @@
 				71412CB4262B1F6D00472B34 /* Info.plist */,
 				71412CE3262B23FC00472B34 /* Core */,
 				71412CE9262B243100472B34 /* Delivery */,
-				71412D44262B2B7000472B34 /* Infrastructure */,
+				71412D85262B456A00472B34 /* Infrastructure */,
 				71412CE6262B240700472B34 /* UI */,
 			);
 			path = CriptoWatcher;
@@ -266,49 +274,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		71412D44262B2B7000472B34 /* Infrastructure */ = {
-			isa = PBXGroup;
-			children = (
-				71412D4C262B2B9900472B34 /* DTOs */,
-				71412D45262B2B8B00472B34 /* Repositories */,
-				71412D4F262B2B9900472B34 /* Services */,
-			);
-			path = Infrastructure;
-			sourceTree = "<group>";
-		};
-		71412D45262B2B8B00472B34 /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				71412D47262B2B8B00472B34 /* BookRepository.swift */,
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
-		71412D4C262B2B9900472B34 /* DTOs */ = {
-			isa = PBXGroup;
-			children = (
-				71412D4E262B2B9900472B34 /* BookOverviewDTO.swift */,
-			);
-			path = DTOs;
-			sourceTree = "<group>";
-		};
-		71412D4F262B2B9900472B34 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				71412D53262B2B9900472B34 /* MainListSetup */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		71412D53262B2B9900472B34 /* MainListSetup */ = {
-			isa = PBXGroup;
-			children = (
-				71412D54262B2B9900472B34 /* RepoSetup.swift */,
-				71412D55262B2B9900472B34 /* RepoSetup.plist */,
-			);
-			path = MainListSetup;
-			sourceTree = "<group>";
-		};
 		71412D68262B2D3300472B34 /* TestCases */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +323,61 @@
 				71412D74262B2D3300472B34 /* FakeBookRepo.swift */,
 			);
 			path = Fakes;
+			sourceTree = "<group>";
+		};
+		71412D85262B456A00472B34 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				71412D86262B456A00472B34 /* Repositories */,
+				71412D89262B456A00472B34 /* DTOs */,
+				71412D8C262B456A00472B34 /* Services */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		71412D86262B456A00472B34 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				71412D87262B456A00472B34 /* DetailsRepository.swift */,
+				71412D88262B456A00472B34 /* BookRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		71412D89262B456A00472B34 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				71412D8A262B456A00472B34 /* BookDetailsDTO.swift */,
+				71412D8B262B456A00472B34 /* BookOverviewDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		71412D8C262B456A00472B34 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				71412D8D262B456A00472B34 /* DetailsSetup */,
+				71412D90262B456A00472B34 /* MainListSetup */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		71412D8D262B456A00472B34 /* DetailsSetup */ = {
+			isa = PBXGroup;
+			children = (
+				71412D8E262B456A00472B34 /* DetailsSetup.swift */,
+				71412D8F262B456A00472B34 /* DetailsSetup.plist */,
+			);
+			path = DetailsSetup;
+			sourceTree = "<group>";
+		};
+		71412D90262B456A00472B34 /* MainListSetup */ = {
+			isa = PBXGroup;
+			children = (
+				71412D91262B456A00472B34 /* RepoSetup.swift */,
+				71412D92262B456A00472B34 /* RepoSetup.plist */,
+			);
+			path = MainListSetup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,10 +468,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71412D98262B456A00472B34 /* DetailsSetup.plist in Resources */,
 				71412D30262B2A4100472B34 /* MainListingViewController.xib in Resources */,
 				71412CB3262B1F6D00472B34 /* LaunchScreen.storyboard in Resources */,
 				71412D2E262B2A4100472B34 /* ListItemViewCell.xib in Resources */,
-				71412D5B262B2B9900472B34 /* RepoSetup.plist in Resources */,
+				71412D9A262B456A00472B34 /* RepoSetup.plist in Resources */,
 				71412CB0262B1F6D00472B34 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,14 +495,17 @@
 			files = (
 				71412D2A262B2A4100472B34 /* CardSourceable.swift in Sources */,
 				71412D31262B2A4100472B34 /* MainListBuilder.swift in Sources */,
-				71412D49262B2B8B00472B34 /* BookRepository.swift in Sources */,
+				71412D94262B456A00472B34 /* BookRepository.swift in Sources */,
+				71412D93262B456A00472B34 /* DetailsRepository.swift in Sources */,
 				71412CF1262B246500472B34 /* MainCoordinator.swift in Sources */,
 				71412CA7262B1F6D00472B34 /* AppDelegate.swift in Sources */,
 				71412D2D262B2A4100472B34 /* ItemDataSource.swift in Sources */,
+				71412D95262B456A00472B34 /* BookDetailsDTO.swift in Sources */,
+				71412D97262B456A00472B34 /* DetailsSetup.swift in Sources */,
 				71412D03262B285800472B34 /* Constants.swift in Sources */,
 				71412D16262B292900472B34 /* Extension+UICollectionView.swift in Sources */,
-				71412D5A262B2B9900472B34 /* RepoSetup.swift in Sources */,
-				71412D57262B2B9900472B34 /* BookOverviewDTO.swift in Sources */,
+				71412D99262B456A00472B34 /* RepoSetup.swift in Sources */,
+				71412D96262B456A00472B34 /* BookOverviewDTO.swift in Sources */,
 				71412D38262B2ADF00472B34 /* MainListViewModel.swift in Sources */,
 				71412D2F262B2A4100472B34 /* MainListingViewController.swift in Sources */,
 				71412D2B262B2A4100472B34 /* BookListingPayload.swift in Sources */,
