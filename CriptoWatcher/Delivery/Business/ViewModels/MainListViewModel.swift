@@ -14,12 +14,12 @@ final class MainListViewModel {
     private let detailsRepository: OrderDetailable
     private let dispatchGroup: DispatchGroup
     // This reference needs to be strong since view model isn't being retained on the coordinator
-    private var navigationListener: Coordinator
+    private var navigationListener: Coordinator?
     private var bookInformation: [BookListingPayload]
     private var booksFallBackIds: [String]
 
     init(dataSource: DataSource<CardSourceable>?,
-         navigationListener: Coordinator,
+         navigationListener: Coordinator?,
          bookRepository: OrdersAvailable,
          detailsRepository: OrderDetailable) {
         self.dataSource = dataSource
@@ -38,7 +38,7 @@ final class MainListViewModel {
 
         let idForBook = dataSource?.data.value[index].id ?? "N/A"
 
-        navigationListener.details(for: idForBook, booksRepo: availableRepo)
+        navigationListener?.details(for: idForBook, booksRepo: availableRepo)
     }
 
     func fetchBooks() {
@@ -52,8 +52,10 @@ final class MainListViewModel {
                 self.dataSource?.data.value = self.booksFallBackIds.map {
                     BookListingPayload(id: $0, lastKnownValue: "N/A")
                 }
-            } else {
+            } else if self.booksFallBackIds.isEmpty == false {
                 self.dataSource?.data.value = self.bookInformation
+            } else {
+                // TODO: show UI error
             }
         }
     }
