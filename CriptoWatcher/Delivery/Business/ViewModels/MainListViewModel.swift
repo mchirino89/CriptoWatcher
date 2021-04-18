@@ -37,8 +37,9 @@ final class MainListViewModel {
         }
 
         let idForBook = dataSource?.data.value[index].id ?? "N/A"
+        let currency = dataSource?.data.value[index].currencyCode ?? "N/A"
 
-        navigationListener?.details(for: idForBook, booksRepo: availableRepo)
+        navigationListener?.details(for: idForBook, currency: currency, booksRepo: availableRepo)
     }
 
     func fetchBooks(notifyCompletion: (() -> Void)? = nil) {

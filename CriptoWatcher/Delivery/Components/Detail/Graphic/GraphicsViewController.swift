@@ -13,12 +13,22 @@ final class GraphicsViewController: UIViewController {
     @IBOutlet private weak var graphicPeriodSegments: UISegmentedControl!
     @IBOutlet private weak  var activityLoader: UIActivityIndicatorView!
 
+    // X-Axis tags
+    @IBOutlet private weak var startDateLabel: UILabel!
+    @IBOutlet private weak var middleDateLabel: UILabel!
+    @IBOutlet private weak var endDateLabel: UILabel!
+
+    // Y-Axis tags
+    @IBOutlet private weak var bottomPointLabel: UILabel!
+    @IBOutlet private weak var topPointLabel: UILabel!
+
     private let viewModel: GraphicsViewModel
     private let dataSource: GraphicsDataSource
 
-    init(currentBookId: String, graphicsRepository: GraphicableSet) {
+    init(currentBookId: String, currency: String, graphicsRepository: GraphicableSet) {
         dataSource = GraphicsDataSource()
         viewModel = GraphicsViewModel(currentBookId: currentBookId,
+                                      currency: currency,
                                       graphicsRepository: graphicsRepository,
                                       dataSource: dataSource)
         super.init(nibName: nil, bundle: nil)
@@ -44,10 +54,20 @@ private extension GraphicsViewController {
     }
 
     func refreshGraph() {
-        graphicView.graphPoints = dataSource.data.value
+        graphicView.graphPoints = viewModel.plotPoints
         graphicView.setNeedsDisplay()
         graphicPeriodSegments.isEnabled = true
+        updateAxisTags()
         activityLoader.stopAnimating()
+    }
+
+    func updateAxisTags() {
+        startDateLabel.text = viewModel.startDate
+        middleDateLabel.text = viewModel.middleDate
+        endDateLabel.text = viewModel.finishDate
+
+        bottomPointLabel.text = viewModel.bottomPoint
+        topPointLabel.text = viewModel.topPoint
     }
 
     func setupListeners() {

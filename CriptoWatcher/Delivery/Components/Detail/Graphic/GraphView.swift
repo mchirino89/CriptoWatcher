@@ -13,16 +13,15 @@ class GraphView: UIView {
         static let margin: CGFloat = 8
         static let topBorder: CGFloat = 50
         static let bottomBorder: CGFloat = 50
-        static let colorAlpha: CGFloat = 0.3
+        static let colorAlpha: CGFloat = 0.5
         static let circleDiameter: CGFloat = 5.0
     }
 
-    var startColor: UIColor = .systemTeal
-
+    var startColor: UIColor = .black
     var graphPoints: [Double] = []
 
     override func draw(_ rect: CGRect) {
-        let width = rect.width
+        let width = rect.width - 16
         let height = rect.height
 
         let path = UIBezierPath(
@@ -75,8 +74,8 @@ class GraphView: UIView {
             return graphHeight + topBorder - yPoint
         }
 
-        UIColor.white.setFill()
-        UIColor.white.setStroke()
+        UIColor.systemYellow.setFill()
+        UIColor.systemYellow.setStroke()
 
         let graphPath = UIBezierPath()
         graphPath.move(to: CGPoint(x: columnXPoint(0), y: columnYPoint(graphPoints[0])))
@@ -100,7 +99,7 @@ class GraphView: UIView {
 
         context.restoreGState()
 
-        graphPath.lineWidth = 2.0
+        graphPath.lineWidth = 3.0
         graphPath.stroke()
 
         let linePath = UIBezierPath()
@@ -116,7 +115,7 @@ class GraphView: UIView {
         let color = UIColor(white: 1.0, alpha: Constants.colorAlpha)
         color.setStroke()
 
-        linePath.lineWidth = 1.0
+        linePath.lineWidth = 1.25
         linePath.stroke()
     }
 }

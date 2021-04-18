@@ -32,6 +32,7 @@ final class SnapshotTestCases: XCTestCase {
     func testGraphViewRendering() {
         // Given
         let graphicsMockController = GraphicsViewController(currentBookId: "btc_mxn",
+                                                            currency: "mxn",
                                                             graphicsRepository: GraphicsRepositorySuccessMock())
 
         // When

@@ -27,6 +27,7 @@ final class DetailsViewController: UIViewController {
     private let graphicsViewController: GraphicsViewController
 
     init(currentBookId: String,
+         currency: String,
          booksRepo: [CardSourceable],
          detailsRepository: OrderDetailable = DetailsRepository(),
          graphicsRepository: GraphicableSet = GraphicsRepository()) {
@@ -36,6 +37,7 @@ final class DetailsViewController: UIViewController {
                                             detailsRepository: detailsRepository)
         infiniteBookScrollViewController = InfiniteListViewController(booksRepo: booksRepo)
         graphicsViewController = GraphicsViewController(currentBookId: currentBookId,
+                                                        currency: currency,
                                                         graphicsRepository: graphicsRepository)
         super.init(nibName: nil, bundle: nil)
     }

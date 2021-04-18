@@ -11,8 +11,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GraphicsViewController" customModule="CriptoWatcher" customModuleProvider="target">
             <connections>
                 <outlet property="activityLoader" destination="Rok-Kw-DN9" id="lWq-OU-Sj6"/>
+                <outlet property="bottomPointLabel" destination="i6d-Xs-tXP" id="uvQ-as-X8l"/>
+                <outlet property="endDateLabel" destination="9C3-5E-Bgv" id="cks-uz-qdM"/>
                 <outlet property="graphicPeriodSegments" destination="4Hf-L0-IdT" id="0HW-SX-5yi"/>
                 <outlet property="graphicView" destination="iRf-Bd-jCw" id="R4z-e4-CIg"/>
+                <outlet property="middleDateLabel" destination="sJv-6b-DIE" id="04Q-cI-FCZ"/>
+                <outlet property="startDateLabel" destination="pbl-TA-sxd" id="3qd-wd-Os7"/>
+                <outlet property="topPointLabel" destination="ehf-R8-ogk" id="pxB-54-oaS"/>
                 <outlet property="view" destination="XQr-l5-9tR" id="3wp-RQ-e9B"/>
             </connections>
         </placeholder>
@@ -42,13 +47,59 @@
                     <rect key="frame" x="146.5" y="143" width="37" height="37"/>
                     <color key="color" systemColor="systemYellowColor"/>
                 </activityIndicatorView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="OMY-Q6-Upb" userLabel="X Axis Stack View">
+                    <rect key="frame" x="4" y="299" width="322" height="16"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pbl-TA-sxd">
+                            <rect key="frame" x="0.0" y="0.0" width="33" height="16"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                            <color key="textColor" systemColor="systemYellowColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sJv-6b-DIE">
+                            <rect key="frame" x="144.5" y="0.0" width="33" height="16"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                            <color key="textColor" systemColor="systemYellowColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9C3-5E-Bgv">
+                            <rect key="frame" x="289" y="0.0" width="33" height="16"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                            <color key="textColor" systemColor="systemYellowColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="XMi-Xa-2xs" userLabel="X Axis Stack View">
+                    <rect key="frame" x="293" y="40.5" width="33" height="234"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ehf-R8-ogk">
+                            <rect key="frame" x="0.0" y="0.0" width="33" height="16"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                            <color key="textColor" systemColor="systemYellowColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i6d-Xs-tXP">
+                            <rect key="frame" x="0.0" y="218" width="33" height="16"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                            <color key="textColor" systemColor="systemYellowColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="XMi-Xa-2xs" firstAttribute="height" secondItem="iRf-Bd-jCw" secondAttribute="height" multiplier="0.725" id="AxR-gz-HaD"/>
+                <constraint firstItem="iRf-Bd-jCw" firstAttribute="bottom" secondItem="OMY-Q6-Upb" secondAttribute="bottom" constant="8" id="LYa-P9-tKc"/>
+                <constraint firstItem="iRf-Bd-jCw" firstAttribute="width" secondItem="OMY-Q6-Upb" secondAttribute="width" constant="8" id="NB3-0m-xUo"/>
                 <constraint firstItem="KRp-ID-CNh" firstAttribute="centerY" secondItem="XQr-l5-9tR" secondAttribute="centerY" id="XWQ-Hr-cWn"/>
                 <constraint firstItem="Rok-Kw-DN9" firstAttribute="centerX" secondItem="XQr-l5-9tR" secondAttribute="centerX" id="cjf-K2-kBi"/>
+                <constraint firstItem="XMi-Xa-2xs" firstAttribute="centerY" secondItem="iRf-Bd-jCw" secondAttribute="centerY" multiplier="0.975" id="eQf-mU-aOP"/>
                 <constraint firstItem="KRp-ID-CNh" firstAttribute="height" secondItem="XQr-l5-9tR" secondAttribute="height" id="fI9-qf-fwe"/>
+                <constraint firstItem="iRf-Bd-jCw" firstAttribute="trailing" secondItem="XMi-Xa-2xs" secondAttribute="trailing" constant="4" id="g7Y-Fw-SLW"/>
                 <constraint firstItem="KRp-ID-CNh" firstAttribute="width" secondItem="XQr-l5-9tR" secondAttribute="width" id="kVI-C2-szE"/>
+                <constraint firstItem="OMY-Q6-Upb" firstAttribute="centerX" secondItem="iRf-Bd-jCw" secondAttribute="centerX" id="nWI-wl-M3p"/>
                 <constraint firstItem="Rok-Kw-DN9" firstAttribute="centerY" secondItem="iRf-Bd-jCw" secondAttribute="centerY" id="qiQ-gJ-97V"/>
                 <constraint firstItem="KRp-ID-CNh" firstAttribute="centerX" secondItem="XQr-l5-9tR" secondAttribute="centerX" id="rct-sD-n6S"/>
             </constraints>
