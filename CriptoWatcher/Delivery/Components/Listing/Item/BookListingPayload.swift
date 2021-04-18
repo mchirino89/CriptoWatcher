@@ -9,8 +9,7 @@ import Foundation
 
 struct BookListingPayload: CardSourceable {
     private let formatter = CoinHandler()
-    private let minimumTag: String
-    private let maximumTag: String
+    private let lastKnownValue: String
     var id: String
 
     var title: String {
@@ -25,17 +24,12 @@ struct BookListingPayload: CardSourceable {
         String(id.split(separator: "_").last ?? "N/A")
     }
 
-    var minimumValue: String {
-        formatter.format(amount: minimumTag, for: currencyCode)
+    var lastValue: String {
+        formatter.format(amount: lastKnownValue, for: currencyCode)
     }
 
-    var maximumValue: String {
-        formatter.format(amount: maximumTag, for: currencyCode)
-    }
-
-    init(id: String, minimumTag: String, maximumTag: String) {
+    init(id: String, lastKnownValue: String) {
         self.id = id
-        self.minimumTag = minimumTag
-        self.maximumTag = maximumTag
+        self.lastKnownValue = lastKnownValue
     }
 }

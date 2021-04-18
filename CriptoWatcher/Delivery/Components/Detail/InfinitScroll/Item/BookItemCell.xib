@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookItemCell" id="gTV-IL-0wX" customClass="BookItemCell" customModule="Bitso" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookItemCell" id="gTV-IL-0wX" customClass="BookItemCell" customModule="CriptoWatcher" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="259" height="85"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -30,21 +30,14 @@
                                                 <rect key="frame" x="0.0" y="12" width="119.5" height="55"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Book" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZRK-CG-8UH">
-                                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="15.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="25.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Minimum price" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ha-Iw-mRf">
-                                                        <rect key="frame" x="0.0" y="19.5" width="119.5" height="16"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum price" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qkf-KR-NoT">
-                                                        <rect key="frame" x="0.0" y="39.5" width="119.5" height="15.5"/>
+                                                        <rect key="frame" x="0.0" y="29.5" width="119.5" height="25.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                         <nil key="textColor"/>
@@ -101,7 +94,6 @@
             <size key="customSize" width="259" height="85"/>
             <connections>
                 <outlet property="bookLabel" destination="ZRK-CG-8UH" id="zQL-ng-6PO"/>
-                <outlet property="maximumPriceLabel" destination="Qkf-KR-NoT" id="GnO-L5-RpT"/>
                 <outlet property="miniGraphicView" destination="1eT-3n-GXs" id="Uz2-Zn-UKs"/>
                 <outlet property="minimumPriceLabel" destination="7ha-Iw-mRf" id="57c-cT-Rtp"/>
             </connections>

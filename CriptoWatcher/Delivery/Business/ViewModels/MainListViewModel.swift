@@ -8,13 +8,15 @@
 import Foundation
 import MauriUtils
 
-struct MainListViewModel {
+final class MainListViewModel {
     private weak var dataSource: DataSource<CardSourceable>?
     private let bookRepository: OrdersAvailable
     private let detailsRepository: OrderDetailable
     private let dispatchGroup: DispatchGroup
     // This reference needs to be strong since view model isn't being retained on the coordinator
     private var navigationListener: Coordinator
+    private var bookInformation: [BookListingPayload]
+    private var booksFallBackIds: [String]
 
     init(dataSource: DataSource<CardSourceable>?,
          navigationListener: Coordinator,
@@ -24,6 +26,8 @@ struct MainListViewModel {
         self.navigationListener = navigationListener
         self.bookRepository = bookRepository
         self.detailsRepository = detailsRepository
+        bookInformation = []
+        booksFallBackIds = []
         dispatchGroup = DispatchGroup()
     }
 
@@ -38,29 +42,51 @@ struct MainListViewModel {
     }
 
     func fetchBooks() {
-        dispatchGroup.notify(queue: .global(qos: .background)) {
+        fetchCompleteDetails()
+        fallbackInformationRetrieval()
 
+        dispatchGroup.notify(queue: .global(qos: .background)) { [weak self] in
+            guard let self = self else { return }
+
+            if self.bookInformation.isEmpty == true {
+                self.dataSource?.data.value = self.booksFallBackIds.map {
+                    BookListingPayload(id: $0, lastKnownValue: "N/A")
+                }
+            } else {
+                self.dataSource?.data.value = self.bookInformation
+            }
         }
     }
 }
 
 private extension MainListViewModel {
     func fetchCompleteDetails() {
+        dispatchGroup.enter()
 
+        detailsRepository.allAvailableBooks { [weak self] result in
+            switch result {
+            case .success(let completeInformation):
+                self?.bookInformation = completeInformation.map {
+                    BookListingPayload(id: $0.bookSymbol, lastKnownValue: $0.lastPrice)
+                }
+            case .failure(let error):
+                print(error)
+            }
+            self?.dispatchGroup.leave()
+        }
     }
 
     func fallbackInformationRetrieval() {
-        bookRepository.allOrders { result in
+        dispatchGroup.enter()
+
+        bookRepository.allOrders { [weak self] result in
             switch result {
             case .success(let retrievedPayload):
-                dataSource?.data.value = retrievedPayload.map {
-                    BookListingPayload(id: $0.book, minimumTag: $0.minimumPrice, maximumTag: $0.maximumPrice)
-                }
+                self?.booksFallBackIds = retrievedPayload.map { $0.book }
             case .failure(let error):
-                dataSource?.data.value = []
-                // TODO: Add proper UI error handling
                 print(error)
             }
+            self?.dispatchGroup.leave()
         }
     }
 }

@@ -24,7 +24,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DSx-Pe-cwN" userLabel="Root Stack View">
                                 <rect key="frame" x="5.5" y="9.5" width="442" height="169"/>
                                 <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sqy-ae-07D">
+                                    <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sqy-ae-07D">
                                         <rect key="frame" x="0.0" y="0.0" width="88.5" height="169"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart" translatesAutoresizingMaskIntoConstraints="NO" id="3sr-hf-j5t">
@@ -43,19 +43,19 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CWX-5Q-uzh">
-                                        <rect key="frame" x="96.5" y="0.0" width="345.5" height="169"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="442" height="169"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Book" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XKs-dc-r3J">
-                                                <rect key="frame" x="0.0" y="0.0" width="345.5" height="72.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="442" height="74.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Minimum price" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hMO-cS-Wvn">
-                                                <rect key="frame" x="0.0" y="80.5" width="345.5" height="88.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Last value price" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hMO-cS-Wvn">
+                                                <rect key="frame" x="0.0" y="82.5" width="442" height="86.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -87,7 +87,7 @@
             <size key="customSize" width="453" height="188"/>
             <connections>
                 <outlet property="bookLabel" destination="XKs-dc-r3J" id="9Cy-dH-ygU"/>
-                <outlet property="subtitleLabel" destination="hMO-cS-Wvn" id="fKD-VO-Lxh"/>
+                <outlet property="lastValueLabel" destination="hMO-cS-Wvn" id="6eE-Tj-aoX"/>
             </connections>
             <point key="canvasLocation" x="429.71014492753625" y="166.07142857142856"/>
         </collectionViewCell>

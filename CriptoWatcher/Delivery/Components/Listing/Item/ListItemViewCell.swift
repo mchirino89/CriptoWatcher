@@ -9,12 +9,10 @@ import UIKit
 
 final class ListItemViewCell: UICollectionViewCell {
     @IBOutlet private weak var bookLabel: UILabel!
-    @IBOutlet private weak var minimumLabel: UILabel!
-    @IBOutlet private weak var maximumLabel: UILabel!
+    @IBOutlet private weak var lastValueLabel: UILabel!
 
     func setup(book: CardSourceable) {
         bookLabel.text = book.title
-        minimumLabel.text = book.minimumValue
-        maximumLabel.text = book.maximumValue
+        lastValueLabel.text = book.lastValue
     }
 }
