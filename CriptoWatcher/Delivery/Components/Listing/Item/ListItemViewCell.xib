@@ -22,13 +22,13 @@
                         <rect key="frame" x="0.0" y="5" width="453" height="188"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DSx-Pe-cwN" userLabel="Root Stack View">
-                                <rect key="frame" x="5.5" y="9.5" width="442" height="169"/>
+                                <rect key="frame" x="22.5" y="9.5" width="408" height="169"/>
                                 <subviews>
-                                    <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sqy-ae-07D">
-                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="169"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sqy-ae-07D">
+                                        <rect key="frame" x="0.0" y="0.0" width="58.5" height="169"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart" translatesAutoresizingMaskIntoConstraints="NO" id="3sr-hf-j5t">
-                                                <rect key="frame" x="2" y="42" width="85" height="85"/>
+                                                <rect key="frame" x="1.5" y="14" width="55.5" height="56"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="3sr-hf-j5t" secondAttribute="height" multiplier="1:1" id="Eby-gB-KLb"/>
@@ -39,21 +39,21 @@
                                         <constraints>
                                             <constraint firstItem="3sr-hf-j5t" firstAttribute="width" secondItem="Sqy-ae-07D" secondAttribute="width" multiplier="0.960452" id="ap9-JI-eLj"/>
                                             <constraint firstItem="3sr-hf-j5t" firstAttribute="centerX" secondItem="Sqy-ae-07D" secondAttribute="centerX" id="kWA-pR-g9x"/>
-                                            <constraint firstItem="3sr-hf-j5t" firstAttribute="centerY" secondItem="Sqy-ae-07D" secondAttribute="centerY" id="khr-rb-Ngy"/>
+                                            <constraint firstItem="3sr-hf-j5t" firstAttribute="centerY" secondItem="Sqy-ae-07D" secondAttribute="centerY" multiplier="0.5" id="khr-rb-Ngy"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CWX-5Q-uzh">
-                                        <rect key="frame" x="0.0" y="0.0" width="442" height="169"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="CWX-5Q-uzh">
+                                        <rect key="frame" x="66.5" y="0.0" width="341.5" height="169"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Book" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XKs-dc-r3J">
-                                                <rect key="frame" x="0.0" y="0.0" width="442" height="74.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="341.5" height="81.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Last value price" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hMO-cS-Wvn">
-                                                <rect key="frame" x="0.0" y="82.5" width="442" height="86.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Last value price" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hMO-cS-Wvn">
+                                                <rect key="frame" x="0.0" y="85.5" width="341.5" height="83.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <nil key="textColor"/>
@@ -63,7 +63,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Sqy-ae-07D" firstAttribute="width" secondItem="DSx-Pe-cwN" secondAttribute="width" multiplier="1/5" id="bXB-rc-3PV"/>
+                                    <constraint firstItem="Sqy-ae-07D" firstAttribute="width" secondItem="DSx-Pe-cwN" secondAttribute="width" multiplier="1/7" id="bXB-rc-3PV"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -71,7 +71,7 @@
                         <constraints>
                             <constraint firstItem="DSx-Pe-cwN" firstAttribute="height" secondItem="zxJ-zI-9uV" secondAttribute="height" multiplier="0.9" id="Bwx-yf-Drr"/>
                             <constraint firstItem="DSx-Pe-cwN" firstAttribute="centerX" secondItem="zxJ-zI-9uV" secondAttribute="centerX" id="DBh-PP-z9q"/>
-                            <constraint firstItem="DSx-Pe-cwN" firstAttribute="width" secondItem="zxJ-zI-9uV" secondAttribute="width" multiplier="0.975" id="GUf-8V-G4U"/>
+                            <constraint firstItem="DSx-Pe-cwN" firstAttribute="width" secondItem="zxJ-zI-9uV" secondAttribute="width" multiplier="0.9" id="GUf-8V-G4U"/>
                             <constraint firstItem="DSx-Pe-cwN" firstAttribute="centerY" secondItem="zxJ-zI-9uV" secondAttribute="centerY" id="nzb-ua-E6X"/>
                         </constraints>
                     </view>
@@ -87,6 +87,7 @@
             <size key="customSize" width="453" height="188"/>
             <connections>
                 <outlet property="bookLabel" destination="XKs-dc-r3J" id="9Cy-dH-ygU"/>
+                <outlet property="contentBackgroundView" destination="zxJ-zI-9uV" id="gwq-3Z-tdi"/>
                 <outlet property="lastValueLabel" destination="hMO-cS-Wvn" id="6eE-Tj-aoX"/>
             </connections>
             <point key="canvasLocation" x="429.71014492753625" y="166.07142857142856"/>

@@ -9,8 +9,8 @@ import UIKit
 
 enum Constants: CGFloat {
     case itemPerRow = 2
-    case combinedPadding = 32
-    case itemHeight = 100
+    case standarPadding = 16
+    case combinedPadding = 24
     case bookCellHeight = 80
 
     static func itemWidth() -> CGFloat {

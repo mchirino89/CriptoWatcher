@@ -60,7 +60,7 @@ private extension MainListingViewController {
             refreshControl?.endRefreshing()
 
             // TODO: remove
-//            self.viewModel.checkDetailsForItem(at: 0)
+            //            self.viewModel.checkDetailsForItem(at: 0)
         }
 
         let renderCompletion: () -> Void = {
@@ -76,7 +76,13 @@ extension MainListingViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Constants.itemWidth(), height: Constants.itemHeight.rawValue)
+        return CGSize(width: Constants.itemWidth(), height: Constants.bookCellHeight.rawValue)
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        Constants.standarPadding.rawValue
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
