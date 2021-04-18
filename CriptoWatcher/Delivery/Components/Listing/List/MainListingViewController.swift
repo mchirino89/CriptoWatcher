@@ -14,6 +14,7 @@ final class MainListingViewController: UIViewController {
     private let refreshControl = UIRefreshControl()
     private let dataSource: ItemDataSource
     private let viewModel: MainListViewModel
+    private var automaticScrollingTimer: Timer = Timer()
 
     init(viewModel: MainListViewModel, dataSource: ItemDataSource) {
         self.viewModel = viewModel
@@ -30,6 +31,7 @@ final class MainListingViewController: UIViewController {
         uiSetup()
         listenListUpdate()
         viewModel.fetchBooks()
+        executeMainThreadUpdate(using: setupAutofresh)
     }
 }
 
@@ -58,9 +60,6 @@ private extension MainListingViewController {
             mainListingCollectionView?.reloadData()
             activityLoader?.stopAnimating()
             refreshControl?.endRefreshing()
-
-            // TODO: remove
-            //            self.viewModel.checkDetailsForItem(at: 0)
         }
 
         let renderCompletion: () -> Void = {
@@ -69,6 +68,14 @@ private extension MainListingViewController {
 
         dataSource.render(completion: renderCompletion)
         activityLoader.startAnimating()
+    }
+
+    func setupAutofresh() {
+        automaticScrollingTimer = Timer.scheduledTimer(timeInterval: TimeFrame.autoRefresh.rawValue,
+                                                       target: self,
+                                                       selector: #selector(pullToRefreshAction),
+                                                       userInfo: nil,
+                                                       repeats: true)
     }
 }
 

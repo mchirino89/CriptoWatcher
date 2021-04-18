@@ -38,7 +38,7 @@ final class InfiniteListViewController: UICollectionViewController {
     }
 
     func setupBoard() {
-        automaticScrollingTimer = Timer.scheduledTimer(timeInterval: 3,
+        automaticScrollingTimer = Timer.scheduledTimer(timeInterval: TimeFrame.autoScroll.rawValue,
                                                        target: self,
                                                        selector: #selector(triggerBoard),
                                                        userInfo: nil,

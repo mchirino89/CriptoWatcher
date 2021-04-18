@@ -17,3 +17,8 @@ enum Constants: CGFloat {
         return (UIScreen.main.bounds.width / Constants.itemPerRow.rawValue) - Constants.combinedPadding.rawValue
     }
 }
+
+enum TimeFrame: TimeInterval {
+    case autoScroll = 3
+    case autoRefresh = 30
+}
