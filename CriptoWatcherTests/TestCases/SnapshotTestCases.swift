@@ -10,7 +10,7 @@ import SnapshotTesting
 import XCTest
 @testable import CriptoWatcher
 
-final class MainListingSnapshotTestCases: XCTestCase {
+final class SnapshotTestCases: XCTestCase {
     func testAnimatorShowsWhileInformationIsBeingRetrieved() {
         // Given
         var dummyNavigation: UINavigationController
@@ -27,5 +27,17 @@ final class MainListingSnapshotTestCases: XCTestCase {
 
         // Then
         assertSnapshot(matching: dummyNavigation, as: .image(on: .iPhone8, precision: 0.99))
+    }
+
+    func testGraphViewRendering() {
+        // Given
+        let graphicsMockController = GraphicsViewController(currentBookId: "btc_mxn",
+                                                            graphicsRepository: GraphicsRepositorySuccessMock())
+
+        // When
+        _ = graphicsMockController.view
+
+        // Then
+        assertSnapshot(matching: graphicsMockController, as: .image(on: .iPhone8, precision: 0.99))
     }
 }

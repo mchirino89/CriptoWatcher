@@ -16,7 +16,7 @@ final class GraphicsViewController: UIViewController {
     private let viewModel: GraphicsViewModel
     private let dataSource: GraphicsDataSource
 
-    init(currentBookId: String, graphicsRepository: GraphicableSet = GraphicsRepository()) {
+    init(currentBookId: String, graphicsRepository: GraphicableSet) {
         dataSource = GraphicsDataSource()
         viewModel = GraphicsViewModel(currentBookId: currentBookId,
                                       graphicsRepository: graphicsRepository,

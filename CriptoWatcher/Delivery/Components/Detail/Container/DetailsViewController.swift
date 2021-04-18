@@ -28,13 +28,15 @@ final class DetailsViewController: UIViewController {
 
     init(currentBookId: String,
          booksRepo: [CardSourceable],
-         detailsRepository: OrderDetailable = DetailsRepository()) {
+         detailsRepository: OrderDetailable = DetailsRepository(),
+         graphicsRepository: GraphicableSet = GraphicsRepository()) {
         dataSource = DetailsDataSource()
         detailsViewModel = DetailsViewModel(currentBookId: currentBookId,
                                             dataSource: dataSource,
                                             detailsRepository: detailsRepository)
         infiniteBookScrollViewController = InfiniteListViewController(booksRepo: booksRepo)
-        graphicsViewController = GraphicsViewController(currentBookId: currentBookId)
+        graphicsViewController = GraphicsViewController(currentBookId: currentBookId,
+                                                        graphicsRepository: graphicsRepository)
         super.init(nibName: nil, bundle: nil)
     }
 
