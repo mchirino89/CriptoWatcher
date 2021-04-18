@@ -65,9 +65,7 @@
 		71C7E2D2262C5EAE00B13871 /* AvailableBooks.json in Resources */ = {isa = PBXBuildFile; fileRef = 71C7E2D1262C5EAE00B13871 /* AvailableBooks.json */; };
 		71C7E2D6262C5F9E00B13871 /* DetailsRepositorySuccessMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E2D5262C5F9E00B13871 /* DetailsRepositorySuccessMock.swift */; };
 		71C7E2DA262C600300B13871 /* AllTickerDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 71C7E2D9262C600300B13871 /* AllTickerDetails.json */; };
-		71C7E2DF262C605500B13871 /* BookAvailableDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E2DE262C605500B13871 /* BookAvailableDummy.swift */; };
 		71C7E2E5262C609C00B13871 /* RepositoryFailureMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E2E4262C609C00B13871 /* RepositoryFailureMocks.swift */; };
-		71C7E2EC262C615600B13871 /* MainListingDataSourceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E2EB262C615600B13871 /* MainListingDataSourceSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,9 +139,7 @@
 		71C7E2D1262C5EAE00B13871 /* AvailableBooks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AvailableBooks.json; sourceTree = "<group>"; };
 		71C7E2D5262C5F9E00B13871 /* DetailsRepositorySuccessMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRepositorySuccessMock.swift; sourceTree = "<group>"; };
 		71C7E2D9262C600300B13871 /* AllTickerDetails.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AllTickerDetails.json; sourceTree = "<group>"; };
-		71C7E2DE262C605500B13871 /* BookAvailableDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAvailableDummy.swift; sourceTree = "<group>"; };
 		71C7E2E4262C609C00B13871 /* RepositoryFailureMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFailureMocks.swift; sourceTree = "<group>"; };
-		71C7E2EB262C615600B13871 /* MainListingDataSourceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListingDataSourceSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,10 +344,8 @@
 		71412D6A262B2D3300472B34 /* TestDoubles */ = {
 			isa = PBXGroup;
 			children = (
-				71C7E2DD262C603E00B13871 /* Dummy */,
 				71412D73262B2D3300472B34 /* Fakes */,
 				71412D6B262B2D3300472B34 /* Mocks */,
-				71C7E2EA262C613B00B13871 /* Spies */,
 			);
 			path = TestDoubles;
 			sourceTree = "<group>";
@@ -539,22 +533,6 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
-		71C7E2DD262C603E00B13871 /* Dummy */ = {
-			isa = PBXGroup;
-			children = (
-				71C7E2DE262C605500B13871 /* BookAvailableDummy.swift */,
-			);
-			path = Dummy;
-			sourceTree = "<group>";
-		};
-		71C7E2EA262C613B00B13871 /* Spies */ = {
-			isa = PBXGroup;
-			children = (
-				71C7E2EB262C615600B13871 /* MainListingDataSourceSpy.swift */,
-			);
-			path = Spies;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -717,11 +695,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71C7E2DF262C605500B13871 /* BookAvailableDummy.swift in Sources */,
 				71C7E2D6262C5F9E00B13871 /* DetailsRepositorySuccessMock.swift in Sources */,
 				71C7E2C5262C5B9A00B13871 /* MainListingViewModelTestCases.swift in Sources */,
 				71412D79262B2D3300472B34 /* FailureRequestManagerMocks.swift in Sources */,
-				71C7E2EC262C615600B13871 /* MainListingDataSourceSpy.swift in Sources */,
 				71412D7A262B2D3300472B34 /* FakeBookRepo.swift in Sources */,
 				71412D76262B2D3300472B34 /* BookRepositoryTestCases.swift in Sources */,
 				71C7E2CA262C5DBF00B13871 /* BookRepositorySuccessMock.swift in Sources */,
