@@ -60,7 +60,7 @@ private extension MainListingViewController {
             refreshControl?.endRefreshing()
 
             // TODO: remove
-            self.viewModel.checkDetailsForItem(at: 0)
+//            self.viewModel.checkDetailsForItem(at: 0)
         }
 
         let renderCompletion: () -> Void = {

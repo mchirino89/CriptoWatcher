@@ -12,7 +12,8 @@ struct MainListBuilder {
         let dataSource: ItemDataSource = ItemDataSource()
         let mainListViewModel = MainListViewModel(dataSource: dataSource,
                                                   navigationListener: navigator,
-                                                  bookRepository: BookRepository())
+                                                  bookRepository: BookRepository(),
+                                                  detailsRepository: DetailsRepository())
         let mainListViewController = MainListingViewController(viewModel: mainListViewModel, dataSource: dataSource)
         let rootNavigation = UINavigationController(rootViewController: mainListViewController)
 

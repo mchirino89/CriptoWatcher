@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListItemViewCell" id="gTV-IL-0wX" customClass="ListItemViewCell" customModule="Bitso" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListItemViewCell" id="gTV-IL-0wX" customClass="ListItemViewCell" customModule="CriptoWatcher" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="453" height="188"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -42,25 +42,18 @@
                                             <constraint firstItem="3sr-hf-j5t" firstAttribute="centerY" secondItem="Sqy-ae-07D" secondAttribute="centerY" id="khr-rb-Ngy"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CWX-5Q-uzh">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CWX-5Q-uzh">
                                         <rect key="frame" x="96.5" y="0.0" width="345.5" height="169"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Book" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XKs-dc-r3J">
-                                                <rect key="frame" x="0.0" y="0.0" width="345.5" height="121"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="345.5" height="72.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum price" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hMO-cS-Wvn">
-                                                <rect key="frame" x="0.0" y="129" width="345.5" height="16"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum price" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CjD-a6-oSS">
-                                                <rect key="frame" x="0.0" y="153" width="345.5" height="16"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Minimum price" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hMO-cS-Wvn">
+                                                <rect key="frame" x="0.0" y="80.5" width="345.5" height="88.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                 <nil key="textColor"/>
@@ -94,8 +87,7 @@
             <size key="customSize" width="453" height="188"/>
             <connections>
                 <outlet property="bookLabel" destination="XKs-dc-r3J" id="9Cy-dH-ygU"/>
-                <outlet property="maximumLabel" destination="CjD-a6-oSS" id="gpk-cw-u1y"/>
-                <outlet property="minimumLabel" destination="hMO-cS-Wvn" id="fKD-VO-Lxh"/>
+                <outlet property="subtitleLabel" destination="hMO-cS-Wvn" id="fKD-VO-Lxh"/>
             </connections>
             <point key="canvasLocation" x="429.71014492753625" y="166.07142857142856"/>
         </collectionViewCell>
