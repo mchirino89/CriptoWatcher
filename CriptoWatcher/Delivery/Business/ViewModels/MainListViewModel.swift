@@ -56,6 +56,7 @@ final class MainListViewModel {
             } else if self.booksFallBackIds.isEmpty == false {
                 self.dataSource?.data.value = self.bookInformation
             } else {
+                self.dataSource?.data.value = []
                 // TODO: show UI error
             }
             notifyCompletion?()

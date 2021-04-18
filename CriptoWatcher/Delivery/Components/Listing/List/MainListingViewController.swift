@@ -11,6 +11,8 @@ import UIKit
 final class MainListingViewController: UIViewController {
     @IBOutlet private weak var activityLoader: UIActivityIndicatorView!
     @IBOutlet private weak var mainListingCollectionView: UICollectionView!
+    @IBOutlet private weak var errorMessageLabel: UILabel!
+
     private let refreshControl = UIRefreshControl()
     private let dataSource: ItemDataSource
     private let viewModel: MainListViewModel
@@ -37,8 +39,10 @@ final class MainListingViewController: UIViewController {
 
 private extension MainListingViewController {
     func uiSetup() {
-        // TODO: localize this
+        // TODO: localize both of these texts
         title = "Criptos"
+        errorMessageLabel.text = "Ops! Parece haber ocurrido un error, por favor chequea tu conexión e intenta de nuevo"
+
         mainListingCollectionView.delegate = self
         mainListingCollectionView.dataSource = dataSource
         mainListingCollectionView.register(cellType: ListItemViewCell.self)
@@ -50,16 +54,13 @@ private extension MainListingViewController {
 
     @objc
     func pullToRefreshAction() {
+        errorMessageLabel.isHidden = true
         viewModel.fetchBooks()
     }
 
     func listenListUpdate() {
-        let uiUpdateCompletion: () -> Void = { [weak mainListingCollectionView,
-                                                weak activityLoader,
-                                                weak refreshControl] in
-            mainListingCollectionView?.reloadData()
-            activityLoader?.stopAnimating()
-            refreshControl?.endRefreshing()
+        let uiUpdateCompletion: () -> Void = { [weak self] in
+            self?.updateUI()
         }
 
         let renderCompletion: () -> Void = {
@@ -68,6 +69,13 @@ private extension MainListingViewController {
 
         dataSource.render(completion: renderCompletion)
         activityLoader.startAnimating()
+    }
+
+    func updateUI() {
+        errorMessageLabel.isHidden = !dataSource.data.value.isEmpty
+        mainListingCollectionView.reloadData()
+        activityLoader.stopAnimating()
+        refreshControl.endRefreshing()
     }
 
     func setupAutofresh() {

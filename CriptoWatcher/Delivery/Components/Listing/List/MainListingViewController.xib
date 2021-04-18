@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainListingViewController" customModule="CriptoWatcher" customModuleProvider="target">
             <connections>
                 <outlet property="activityLoader" destination="xoH-Bv-9ie" id="qRd-Iu-mdF"/>
+                <outlet property="errorMessageLabel" destination="2Ai-1q-Ojv" id="nht-kd-1UU"/>
                 <outlet property="mainListingCollectionView" destination="CGh-fw-QTv" id="5K9-8Q-mAH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,9 +22,15 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ai-1q-Ojv">
+                    <rect key="frame" x="16" y="60" width="382" height="24"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="CGh-fw-QTv">
                     <rect key="frame" x="16" y="52" width="382" height="802"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zyc-6l-eQV">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -40,10 +47,13 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="CGh-fw-QTv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="3AY-Jh-z2Z"/>
+                <constraint firstItem="2Ai-1q-Ojv" firstAttribute="width" secondItem="CGh-fw-QTv" secondAttribute="width" id="9wP-p4-a69"/>
+                <constraint firstItem="2Ai-1q-Ojv" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="C9e-t7-9um"/>
                 <constraint firstItem="xoH-Bv-9ie" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="HQB-VM-sl3"/>
                 <constraint firstItem="xoH-Bv-9ie" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="QAT-r3-rxn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CGh-fw-QTv" secondAttribute="trailing" constant="16" id="Sxy-xH-iYY"/>
                 <constraint firstItem="CGh-fw-QTv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aUr-C4-Mif"/>
+                <constraint firstItem="2Ai-1q-Ojv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="s2Y-mF-Wci"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="CGh-fw-QTv" secondAttribute="bottom" constant="8" id="vA7-Jp-586"/>
             </constraints>
             <point key="canvasLocation" x="141" y="121"/>
