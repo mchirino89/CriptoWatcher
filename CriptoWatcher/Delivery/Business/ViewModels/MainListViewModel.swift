@@ -26,9 +26,9 @@ final class MainListViewModel {
         self.navigationListener = navigationListener
         self.bookRepository = bookRepository
         self.detailsRepository = detailsRepository
+        dispatchGroup = DispatchGroup()
         bookInformation = []
         booksFallBackIds = []
-        dispatchGroup = DispatchGroup()
     }
 
     func checkDetailsForItem(at index: Int) {
@@ -41,7 +41,7 @@ final class MainListViewModel {
         navigationListener?.details(for: idForBook, booksRepo: availableRepo)
     }
 
-    func fetchBooks() {
+    func fetchBooks(notifyCompletion: (() -> Void)? = nil) {
         fetchCompleteDetails()
         fallbackInformationRetrieval()
 
@@ -57,6 +57,7 @@ final class MainListViewModel {
             } else {
                 // TODO: show UI error
             }
+            notifyCompletion?()
         }
     }
 }

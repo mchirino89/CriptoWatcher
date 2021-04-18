@@ -48,6 +48,8 @@
 		71412DB7262B48BB00472B34 /* InfiniteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412DB2262B48BB00472B34 /* InfiniteListViewController.swift */; };
 		71412DB8262B48BB00472B34 /* BookItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71412DB4262B48BB00472B34 /* BookItemCell.xib */; };
 		71412DB9262B48BB00472B34 /* BookItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71412DB5262B48BB00472B34 /* BookItemCell.swift */; };
+		715537A2262C804100BCA986 /* MainListingSnapshotTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715537A1262C804100BCA986 /* MainListingSnapshotTestCases.swift */; };
+		7166C767262C866B00113661 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 7166C766262C866B00113661 /* SnapshotTesting */; };
 		7180C2D2262B60890078AEFE /* GraphicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180C2D0262B60890078AEFE /* GraphicsViewController.swift */; };
 		7180C2D3262B60890078AEFE /* GraphicsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7180C2D1262B60890078AEFE /* GraphicsViewController.xib */; };
 		7180C2D9262B61250078AEFE /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180C2D8262B61250078AEFE /* Extension+UIViewController.swift */; };
@@ -122,6 +124,7 @@
 		71412DB2262B48BB00472B34 /* InfiniteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteListViewController.swift; sourceTree = "<group>"; };
 		71412DB4262B48BB00472B34 /* BookItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookItemCell.xib; sourceTree = "<group>"; };
 		71412DB5262B48BB00472B34 /* BookItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookItemCell.swift; sourceTree = "<group>"; };
+		715537A1262C804100BCA986 /* MainListingSnapshotTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListingSnapshotTestCases.swift; sourceTree = "<group>"; };
 		7180C2D0262B60890078AEFE /* GraphicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsViewController.swift; sourceTree = "<group>"; };
 		7180C2D1262B60890078AEFE /* GraphicsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphicsViewController.xib; sourceTree = "<group>"; };
 		7180C2D8262B61250078AEFE /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
@@ -156,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7166C767262C866B00113661 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +341,7 @@
 			children = (
 				71412D69262B2D3300472B34 /* BookRepositoryTestCases.swift */,
 				71C7E2C4262C5B9A00B13871 /* MainListingViewModelTestCases.swift */,
+				715537A1262C804100BCA986 /* MainListingSnapshotTestCases.swift */,
 			);
 			path = TestCases;
 			sourceTree = "<group>";
@@ -571,6 +576,9 @@
 				71412CBB262B1F6E00472B34 /* PBXTargetDependency */,
 			);
 			name = CriptoWatcherTests;
+			packageProductDependencies = (
+				7166C766262C866B00113661 /* SnapshotTesting */,
+			);
 			productName = CriptoWatcherTests;
 			productReference = 71412CB9262B1F6E00472B34 /* CriptoWatcherTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -605,6 +613,7 @@
 			packageReferences = (
 				71412CF8262B27FE00472B34 /* XCRemoteSwiftPackageReference "MauriNet" */,
 				71412CFD262B282300472B34 /* XCRemoteSwiftPackageReference "MauriUtils" */,
+				7166C765262C866B00113661 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = 71412CA4262B1F6D00472B34 /* Products */;
 			projectDirPath = "";
@@ -702,6 +711,7 @@
 				71412D76262B2D3300472B34 /* BookRepositoryTestCases.swift in Sources */,
 				71C7E2CA262C5DBF00B13871 /* BookRepositorySuccessMock.swift in Sources */,
 				71C7E2E5262C609C00B13871 /* RepositoryFailureMocks.swift in Sources */,
+				715537A2262C804100BCA986 /* MainListingSnapshotTestCases.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -974,6 +984,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		7166C765262C866B00113661 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -986,6 +1004,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 71412CFD262B282300472B34 /* XCRemoteSwiftPackageReference "MauriUtils" */;
 			productName = MauriUtils;
+		};
+		7166C766262C866B00113661 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7166C765262C866B00113661 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
