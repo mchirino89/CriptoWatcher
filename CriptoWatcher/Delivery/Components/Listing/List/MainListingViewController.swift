@@ -69,6 +69,7 @@ private extension MainListingViewController {
 
         dataSource.render(completion: renderCompletion)
         activityLoader.startAnimating()
+        errorMessageLabel.isHidden = true
     }
 
     func updateUI() {
